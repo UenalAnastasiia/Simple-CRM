@@ -4,19 +4,19 @@
     <div>
         <mat-form-field class="margin-right-16" appearance="outline">
             <mat-label>First Name</mat-label>
-            <input matInput placeholder="Placeholder">
+            <input [(ngModel)]="user.firstName" matInput placeholder="Placeholder">
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Last Name</mat-label>
-            <input matInput placeholder="Placeholder">
+            <input [(ngModel)]="user.lastName" matInput placeholder="Placeholder">
         </mat-form-field>
     </div>
 
     <div>
         <mat-form-field appearance="outline" class="full-width">
             <mat-label>Birth Date</mat-label>
-            <input matInput placeholder="Placeholder" [matDatepicker]="picker1">
+            <input [(ngModel)]="birthDate" matInput placeholder="Placeholder" [matDatepicker]="picker1">
             <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
             <mat-datepicker #picker1></mat-datepicker>
         </mat-form-field>
@@ -25,25 +25,25 @@
     <div>
         <mat-form-field appearance="outline" class="full-width">
             <mat-label>Street + House No.</mat-label>
-            <input matInput placeholder="Placeholder">
+            <input [(ngModel)]="user.street" matInput placeholder="Placeholder">
         </mat-form-field>
     </div>
 
     <div>
         <mat-form-field appearance="outline" class="margin-right-16">
             <mat-label>Zip Code</mat-label>
-            <input matInput placeholder="Placeholder">
+            <input [(ngModel)]="user.zipCode" matInput placeholder="Placeholder">
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>City</mat-label>
-            <input matInput placeholder="Placeholder">
+            <input [(ngModel)]="user.city" matInput placeholder="Placeholder">
         </mat-form-field>
     </div>
 
 </div>
 
 <div mat-dialog-actions>
-    <button mat-button (click)="onNoClick()">Cancel</button>
-    <button mat-button cdkFocusInitial>Save</button>
+    <button mat-button (click)="onCancelClick()">Cancel</button>
+    <button mat-button cdkFocusInitial (click)="saveUser()">Save</button>
 </div>
