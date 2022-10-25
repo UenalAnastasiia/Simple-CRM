@@ -20,6 +20,13 @@
     align-items: center;
 }
 
+.logo-img {
+    max-width: 100%;
+    height: 48px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
 mat-toolbar, mat-toolbar-row {
     min-height: 56px;
     height: 56px;
