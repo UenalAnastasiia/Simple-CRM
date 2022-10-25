@@ -1,3 +1,8 @@
+mat-card {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 .add-user-btn {
     position: absolute;
     right: 26px;
@@ -6,4 +11,52 @@
 
 .example-tooltip-red {
     background: #b71c1c;
-  }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    tr {
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+        cursor: pointer;
+
+        &:first-child {
+            cursor: unset;
+
+            &:hover {
+                background-color: unset;
+            }
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        &:hover {
+            background-color: rgba($color: #000000, $alpha: 0.04);
+        }
+
+        td {
+            height: 48px;
+
+            &:first-child {
+                padding-left: 16px;
+            }
+        }
+
+        th {
+            &:first-child {
+                padding-left: 16px;
+            }
+        }
+    
+    }
+
+    th {
+        color: rgba($color: #000000, $alpha: 0.4);
+        font-size: 14px;
+        font-weight: 500;
+        text-align: start;
+    }
+}
