@@ -6,7 +6,7 @@
             <th>City</th>
         </tr>
 
-        <tr *ngFor="let user of allUsers" [routerLink]="['/user/' + user.userID]">
+        <tr *ngFor="let user of allUsers" [routerLink]="['/user/' + user.userID]" matTooltipClass="example-tooltip-red" matTooltip="Show more">
             <td>{{ user.user.firstName }}</td>
             <td>{{ user.user.email }}</td>
             <td>{{ user.user.city }}</td>
