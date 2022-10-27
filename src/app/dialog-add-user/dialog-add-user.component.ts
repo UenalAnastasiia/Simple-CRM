@@ -32,8 +32,8 @@ export class DialogAddUserComponent implements OnInit {
   }
 
 
-  onCancelClick(): void {
-    this.dialogRef.close();
-  }
+  // closeDialog(): void {
+  //   this.dialogRef.close();
+  // }
 
 }
