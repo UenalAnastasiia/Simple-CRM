@@ -1,11 +1,11 @@
 export class User {
-    firstName: string;
-    lastName: string;
-    email: string;
-    birthDate: number;
-    street: string;
-    zipCode: number;
-    city: string;
+    public firstName: string[] = [];
+    public lastName: string[] = [];
+    public email: string[] = [];
+    public birthDate: number;
+    public street: string;
+    public zipCode: number;
+    public city: string;
 
     // obj? => if Object exist
     constructor(obj?: any) {

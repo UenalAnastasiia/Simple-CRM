@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Firestore, collectionData } from '@angular/fire/firestore';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute } from '@angular/router';
 import { collection } from '@firebase/firestore';
 import { Observable } from 'rxjs';
 import { User } from 'src/models/user.class';
@@ -17,18 +18,20 @@ export class UserComponent implements OnInit {
   user = new User();
   allUsers$: Observable<any>;
   allUsers: any = [];
+  userID: string;
 
-  constructor(public dialog: MatDialog, private firestore: Firestore) { }
+  constructor(public dialog: MatDialog, private firestore: Firestore, private route: ActivatedRoute,) { }
 
   ngOnInit(): void {
     const userCollection = collection(this.firestore, 'users');
-    this.allUsers$ = collectionData(userCollection);
+    this.allUsers$ = collectionData(userCollection, { idField: "userID" });
 
     this.allUsers$.subscribe((changes: any) => {
       console.log('Received changes:', changes);
       this.allUsers = changes;
     });
   }
+
 
   openDialog() {
     this.dialog.open(DialogAddUserComponent);
