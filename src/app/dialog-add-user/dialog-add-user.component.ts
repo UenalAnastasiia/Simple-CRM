@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/models/user.class';
 import { MatDialogRef } from '@angular/material/dialog';
-import { addDoc, Firestore } from '@angular/fire/firestore';
-import { collection } from '@firebase/firestore';
+import { addDoc, collectionData, collection, Firestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-dialog-add-user',
@@ -13,12 +13,11 @@ export class DialogAddUserComponent implements OnInit {
 
   user = new User();
   birthDate: Date;
-  loading = false;
+  loading: boolean = false;
 
-  constructor(public dialogRef: MatDialogRef<DialogAddUserComponent>, public firestore: Firestore) { }
+  constructor(public dialogRef: MatDialogRef<DialogAddUserComponent>, private firestore: Firestore) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 
   saveUser() {

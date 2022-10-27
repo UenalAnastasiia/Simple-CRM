@@ -6,17 +6,17 @@
             <th>City</th>
         </tr>
 
-        <tr matTooltipClass="example-tooltip-red" matTooltip="Show Contact Info">
-            <td>Anastasiia</td>
-            <td>velika@gmail.com</td>
-            <td>Hilden</td>
+        <tr *ngFor="let user of allUsers">
+            <td>{{ user.user.firstName }}</td>
+            <td>{{ user.user.email }}</td>
+            <td>{{ user.user.city }}</td>
         </tr>
 
-        <tr>
+        <!-- <tr matTooltipClass="example-tooltip-red" matTooltip="Show Contact Info">
             <td>Anastasiia</td>
             <td>velika@gmail.com</td>
             <td>Hilden</td>
-        </tr>
+        </tr> -->
     </table>
 </mat-card>
 
