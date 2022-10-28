@@ -29,7 +29,7 @@ export class UserDetailsComponent implements OnInit {
     const docRef = doc(this.firestore, `users/${id}`);
     const snapDoc = await getDoc(docRef);
     this.userData = snapDoc.data();
-    this.user = new User(this.userData.user);
+    this.user = new User(this.userData);
     console.log('User Data: ', this.user);
   }
 }
