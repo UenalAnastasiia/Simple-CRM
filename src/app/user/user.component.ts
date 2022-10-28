@@ -26,9 +26,9 @@ export class UserComponent implements OnInit {
     const userCollection = collection(this.firestore, 'users');
     this.allUsers$ = collectionData(userCollection, { idField: "userID" });
 
-    this.allUsers$.subscribe((changes: any) => {
-      console.log('Received changes:', changes);
-      this.allUsers = changes;
+    this.allUsers$.subscribe((loadData: any) => {
+      console.log('Received changes:', loadData);
+      this.allUsers = loadData;
     });
   }
 
