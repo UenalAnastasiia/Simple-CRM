@@ -3,14 +3,13 @@
 
     <h1 mat-dialog-title>Add User</h1>
     <div mat-dialog-content>
-
-        <div>
-            <mat-form-field class="margin-right-16" appearance="outline">
+        <div class="form-box">
+            <mat-form-field class="name-form-field" appearance="outline">
                 <mat-label>First Name</mat-label>
                 <input [disabled]="loading" [(ngModel)]="user.firstName" matInput>
             </mat-form-field>
 
-            <mat-form-field appearance="outline">
+            <mat-form-field appearance="outline" class="name-form-field">
                 <mat-label>Last Name</mat-label>
                 <input [disabled]="loading" [(ngModel)]="user.lastName" matInput>
             </mat-form-field>
@@ -39,18 +38,22 @@
             </mat-form-field>
         </div>
 
-        <div>
-            <mat-form-field appearance="outline" class="margin-right-16">
+        <div class="form-box">
+            <mat-form-field appearance="outline" class="address-form-field">
                 <mat-label>Zip Code</mat-label>
                 <input [disabled]="loading" [(ngModel)]="user.zipCode" matInput>
             </mat-form-field>
 
-            <mat-form-field appearance="outline">
+            <mat-form-field appearance="outline" class="address-form-field">
                 <mat-label>City</mat-label>
                 <input [disabled]="loading" [(ngModel)]="user.city" matInput>
             </mat-form-field>
-        </div>
 
+            <mat-form-field appearance="outline" class="address-form-field">
+                <mat-label>Country</mat-label>
+                <input [disabled]="loading" [(ngModel)]="user.country" matInput>
+            </mat-form-field>
+        </div>
     </div>
 
     <div mat-dialog-actions>

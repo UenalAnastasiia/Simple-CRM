@@ -27,7 +27,7 @@ export class UserComponent implements OnInit {
     this.allUsers$ = collectionData(userCollection, { idField: "userID" });
 
     this.allUsers$.subscribe((loadData: any) => {
-      console.log('Received changes:', loadData);
+      // console.log('Received changes:', loadData);
       this.allUsers = loadData;
     });
   }

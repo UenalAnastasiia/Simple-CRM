@@ -22,6 +22,13 @@
                 </mat-form-field>
             </div>
 
+            <div>
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Country</mat-label>
+                    <input [disabled]="loading" [(ngModel)]="user.country" matInput>
+                </mat-form-field>
+            </div>
+
         </div>
 
         <div mat-dialog-actions>

@@ -6,6 +6,7 @@ export class User {
     street: string;
     zipCode: number;
     city: string;
+    country: string;
     id: string;
 
     // obj? => if Object exist
@@ -17,6 +18,7 @@ export class User {
         this.street = obj ? obj.street : '';
         this.zipCode = obj ? obj.zipCode : '';
         this.city = obj ? obj.city : '';
+        this.country = obj ? obj.country : '';
         this.id = obj ? obj.id : '';
     }
 
@@ -29,6 +31,7 @@ export class User {
             street: this.street,
             zipCode: this.zipCode,
             city: this.city,
+            country: this.country,
             id: this.id
         }
     }

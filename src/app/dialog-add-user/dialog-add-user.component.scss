@@ -1,4 +1,5 @@
 .dialog-container {
+    width: 70vw;
     position: relative;
 
     .progress-bar-add-box {
@@ -7,5 +8,22 @@
         right: -24px;
         top: -24px;
         width: calc(100% + 48px);
+    }
+
+    mat-dialog-content {
+        width: 100%;
+    }
+
+    .form-box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .name-form-field {
+        width: 34vw;
+    }
+
+    .address-form-field {
+        width: 22vw;
     }
 }
