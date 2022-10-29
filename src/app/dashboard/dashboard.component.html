@@ -1,1 +1,14 @@
-<p>dashboard works!</p>
+<div class="plant-bg">
+    <mat-card class="demo-inline-calendar-card calendar-size">
+        <mat-calendar [(selected)]="currentDate"></mat-calendar>
+    </mat-card>
+
+    <div class="time-box">
+        <div class="clock-container">
+            <mat-icon>schedule</mat-icon>
+            <h1> {{ rxTime | date: 'hh:mm:ss a' }} </h1>
+            <mat-icon class="margin-left-24">explore</mat-icon>
+            <h1>Berlin</h1>
+        </div>
+    </div>
+</div>

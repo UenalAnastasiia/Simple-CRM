@@ -12,7 +12,6 @@ import { DialogEditUserComponent } from '../dialog-edit-user/dialog-edit-user.co
   styleUrls: ['./user-details.component.scss']
 })
 export class UserDetailsComponent implements OnInit {
-  
   userID: any;
   user: User = new User();
   userData: any;
@@ -51,4 +50,5 @@ export class UserDetailsComponent implements OnInit {
     dialog.componentInstance.user = new User(this.user.toJSON());
     dialog.componentInstance.user.id = this.userID;
   }
+
 }
