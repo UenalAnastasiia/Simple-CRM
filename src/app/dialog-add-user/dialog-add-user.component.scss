@@ -25,5 +25,14 @@
 
     .address-form-field {
         width: 22vw;
+
+        select {
+            width: 100%;
+            border: 1px solid white;
+
+            &:focus {
+                border: 1px solid white;
+            }
+        }
     }
 }

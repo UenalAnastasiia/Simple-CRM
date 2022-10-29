@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { doc, Firestore, setDoc } from '@angular/fire/firestore';
 import { MatDialogRef } from '@angular/material/dialog';
+import { countries } from 'src/assets/store/country-data-store';
 import { User } from 'src/models/user.class';
 
 @Component({
@@ -12,6 +13,7 @@ export class DialogEditAddressComponent implements OnInit {
   
   user: User;
   loading: boolean = false;
+  countries: any = countries;
 
   constructor(public dialogRef: MatDialogRef<DialogEditAddressComponent>, private firestore: Firestore) { }
 
