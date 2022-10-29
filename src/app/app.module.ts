@@ -29,6 +29,7 @@ import { MatCardModule } from '@angular/material/card';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.com
     MatProgressBarModule,
     MatCardModule,
     MatMenuModule,
+    MatSelectModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),

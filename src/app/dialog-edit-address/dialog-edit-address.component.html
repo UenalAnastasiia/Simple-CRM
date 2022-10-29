@@ -25,10 +25,9 @@
             <div>
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Country</mat-label>
-                    <input [disabled]="loading" [(ngModel)]="user.country" matInput style="display: none">
-                    <select class="form-control" name="country" id="country" [disabled]="loading" [(ngModel)]="user.country">
-                        <option *ngFor="let country of countries" [value]="country.name">{{ country.name }}</option>
-                   </select>
+                    <mat-select [disabled]="loading" [(ngModel)]="user.country">
+                      <mat-option *ngFor="let country of countries" [value]="country.name">{{ country.name }}</mat-option>
+                    </mat-select>
                 </mat-form-field>
             </div>
 
