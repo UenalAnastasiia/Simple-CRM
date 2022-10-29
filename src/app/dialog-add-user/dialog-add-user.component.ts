@@ -14,25 +14,26 @@ export class DialogAddUserComponent implements OnInit {
   user = new User();
   birthDate: Date;
   loading: boolean = false;
-
+  
   constructor(public dialogRef: MatDialogRef<DialogAddUserComponent>, private firestore: Firestore) { }
 
   ngOnInit(): void { }
 
-
   async saveUser() {
     this.user.birthDate = this.birthDate.getTime();
-    console.log('Current user: ', this.user);
     this.loading = true;
+    this.addDataToDB();
 
+    setTimeout(() => {
+      this.loading = false;
+      this.dialogRef.close();
+    }, 2000);
+  }
+
+
+  async addDataToDB() {
     const userCollection = collection(this.firestore, 'users');
     await addDoc(userCollection, this.user.toJSON());
-    this.loading = false;
-    this.dialogRef.close();
-    // addDoc(userCollection, { user: this.user.toJSON() }).then((result: any) => {
-    //   this.loading = false;
-    //   this.dialogRef.close();
-    //   console.log('Adding user finished', result);
-    // });
+    this.user.id = userCollection.id;
   }
 }
