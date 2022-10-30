@@ -8,7 +8,7 @@ import { collection, Firestore, getDocs } from '@angular/fire/firestore';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  contactLength: number;
+  userLength: number;
 
   constructor(private firestore: Firestore) { }
 
@@ -22,7 +22,7 @@ export class DashboardComponent implements OnInit {
     const docsSnap = await getDocs(userCollection);
 
     docsSnap.forEach(() => {
-      this.contactLength = docsSnap.docs.length;
+      this.userLength = docsSnap.docs.length;
     });
   }
 

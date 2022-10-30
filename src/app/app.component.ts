@@ -8,7 +8,7 @@ import { collection } from '@firebase/firestore';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  contactLength: number;
+  userLength: number;
 
   constructor(private firestore: Firestore) { }
 
@@ -22,7 +22,7 @@ export class AppComponent {
     const docsSnap = await getDocs(userCollection);
 
     docsSnap.forEach(() => {
-      this.contactLength = docsSnap.docs.length;
+      this.userLength = docsSnap.docs.length;
     });
   }
 }

@@ -6,10 +6,20 @@
 
         <ul class="menu-items">
             <li routerLink="/">
-                <mat-icon>fact_check</mat-icon> Dashboard
+                <mat-icon>dashboard</mat-icon>
+                <span>Dashboard</span>
             </li>
             <li routerLink="/user">
-                <mat-icon matBadge="{{ contactLength }}" matBadgeColor="primary">person</mat-icon> Contacts
+                <mat-icon matBadge="{{ userLength }}" matBadgeColor="primary">person</mat-icon>
+                <span>User</span>
+            </li>
+            <li routerLink="/user">
+                <mat-icon matBadge="{{ userLength }}" matBadgeColor="primary">edit_document</mat-icon>
+                <span>Task</span>
+            </li>
+            <li routerLink="/user">
+                <mat-icon matBadge="{{ 0 }}" matBadgeColor="primary">business_center</mat-icon>
+                <span>Project</span>
             </li>
         </ul>
     </mat-drawer>

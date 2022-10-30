@@ -40,6 +40,7 @@ mat-toolbar, mat-toolbar-row {
     li {
         padding-left: 16px;
         padding-right: 16px;
+        margin-bottom: 12px;
         height: 48px;
         display: flex;
         align-items: center;
@@ -47,6 +48,8 @@ mat-toolbar, mat-toolbar-row {
 
         mat-icon {
             margin-right: 16px;
+            padding-right: 4px;
+            color: #b7b2b2;
         }
 
         &:hover {

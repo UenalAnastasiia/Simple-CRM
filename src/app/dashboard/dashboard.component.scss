@@ -2,17 +2,30 @@
     display: flex;
     flex-direction: column;
 }
-.contact-box {
+.user-box {
     margin-top: 32px;
-
-    h2 {
-        margin-bottom: 0px;
-    }
+    margin-left: 56px;
 
     .number {
-        color: rgb(192 28 28);
-        font-size: 22px;
+        font-size: 36px;
+        color: #be2a2a;
         margin-left: 4px;
         margin-right: 4px;
+    }
+
+    button {
+        padding: 8px;
+        width: 230px;
+        text-align: start;
+    }
+
+    .activeUser {
+        font-size: 16px;
+    }
+
+    mat-icon {
+        font-size: 36px;
+        width: 36px;
+        height: 36px;
     }
 }
