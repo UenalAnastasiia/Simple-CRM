@@ -30,6 +30,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
 import { MatSelectModule } from '@angular/material/select';
+import { TimeBoardComponent } from './time-board/time-board.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { MatSelectModule } from '@angular/material/select';
     DialogAddUserComponent,
     UserDetailsComponent,
     DialogEditAddressComponent,
-    DialogEditUserComponent
+    DialogEditUserComponent,
+    TimeBoardComponent
   ],
   imports: [
     BrowserModule,
