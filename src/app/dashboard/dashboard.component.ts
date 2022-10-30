@@ -12,6 +12,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   currentDate: Date | null;
 
   time: any;
+  timeFormat: any;
   berlinDate = new Date();
   berlinTime = new Date();
   nyDate = new Date();
@@ -48,6 +49,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   berlinTimeZone() {
     const berlinDate = this.changeTimeZone(new Date(), 'Europe/Berlin');
     this.berlinTime = berlinDate;
+
   }
 
 
