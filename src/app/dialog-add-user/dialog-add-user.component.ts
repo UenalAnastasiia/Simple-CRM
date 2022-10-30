@@ -28,6 +28,7 @@ export class DialogAddUserComponent implements OnInit {
 
     setTimeout(() => {
       this.loading = false;
+      location.reload();
       this.dialogRef.close();
     }, 2000);
   }

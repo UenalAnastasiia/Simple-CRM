@@ -1,1 +1,12 @@
-<app-time-board></app-time-board>
+<div class="dashboard-container">
+    <div>
+        <app-time-board></app-time-board>
+    </div>
+
+    <div class="contact-box">
+        <button mat-raised-button color="primary" routerLink="/user">
+            <h2>Contacts</h2>
+            <span>You have <span class="number"><b> {{ contactLength }} </b></span> Contacts in your list</span>
+        </button>
+    </div>
+</div>

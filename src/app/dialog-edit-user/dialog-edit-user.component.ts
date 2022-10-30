@@ -36,7 +36,7 @@ export class DialogEditUserComponent implements OnInit {
 
   reloadUserData() {
     setTimeout(() => {
-      location.reload();
+      window.location.reload();
     }, 1000);
   }
 }

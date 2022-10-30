@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Firestore, getDocs } from '@angular/fire/firestore';
+import { collection } from '@firebase/firestore';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'simple-crm';
+  contactLength: number;
+
+  constructor(private firestore: Firestore) { }
+
+  ngOnInit(): void {
+    this.contactsLength();
+  }
+
+
+  async contactsLength() {
+    const userCollection = collection(this.firestore, 'users');
+    const docsSnap = await getDocs(userCollection);
+
+    docsSnap.forEach(() => {
+      this.contactLength = docsSnap.docs.length;
+    });
+  }
 }
