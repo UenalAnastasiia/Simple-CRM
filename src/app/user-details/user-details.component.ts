@@ -6,6 +6,8 @@ import { Clipboard } from '@angular/cdk/clipboard';
 import { User } from 'src/models/user.class';
 import { DialogEditAddressComponent } from '../dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from '../dialog-edit-user/dialog-edit-user.component';
+import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { CopyMessageComponent } from '../copy-message/copy-message.component';
 
 @Component({
   selector: 'app-user-details',
@@ -16,9 +18,11 @@ export class UserDetailsComponent implements OnInit {
   userID: any;
   user: User = new User();
   userData: any;
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
 
 
-  constructor(private route: ActivatedRoute, private firestore: Firestore, public dialog: MatDialog, private clipboard: Clipboard) { }
+  constructor(private route: ActivatedRoute, private firestore: Firestore, public dialog: MatDialog, private clipboard: Clipboard, private _snackBar: MatSnackBar) { }
 
 
   ngOnInit(): void {
@@ -56,6 +60,15 @@ export class UserDetailsComponent implements OnInit {
   copyToClipboard(value: HTMLElement): void {
     const text: string = value.textContent;
     this.clipboard.copy(text);
+  }
+
+
+  openCopyWindow() {
+    this._snackBar.openFromComponent(CopyMessageComponent, {
+      duration: 1000,
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition
+    });
   }
 
 }

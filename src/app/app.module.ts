@@ -33,6 +33,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { TimeBoardComponent } from './time-board/time-board.component';
 import { MatBadgeModule } from '@angular/material/badge';
 import { ClipboardModule } from '@angular/cdk/clipboard';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CopyMessageComponent } from './copy-message/copy-message.component';
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
     UserDetailsComponent,
     DialogEditAddressComponent,
     DialogEditUserComponent,
-    TimeBoardComponent
+    TimeBoardComponent,
+    CopyMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -67,6 +70,7 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
     MatSelectModule,
     MatBadgeModule,
     ClipboardModule,
+    MatSnackBarModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
