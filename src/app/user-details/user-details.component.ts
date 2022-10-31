@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { doc, Firestore, getDoc } from '@angular/fire/firestore';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
+import { Clipboard } from '@angular/cdk/clipboard';
 import { User } from 'src/models/user.class';
 import { DialogEditAddressComponent } from '../dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from '../dialog-edit-user/dialog-edit-user.component';
@@ -16,13 +17,13 @@ export class UserDetailsComponent implements OnInit {
   user: User = new User();
   userData: any;
 
-  constructor(private route: ActivatedRoute, private firestore: Firestore, public dialog: MatDialog) { }
+
+  constructor(private route: ActivatedRoute, private firestore: Firestore, public dialog: MatDialog, private clipboard: Clipboard) { }
 
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       this.userID = params.get('id');
-      // console.log('ID: ', this.userID);
     });
 
     this.getDocRef(this.userID);
@@ -49,6 +50,12 @@ export class UserDetailsComponent implements OnInit {
     const dialog = this.dialog.open(DialogEditAddressComponent);
     dialog.componentInstance.user = new User(this.user.toJSON());
     dialog.componentInstance.user.id = this.userID;
+  }
+
+
+  copyToClipboard(value: HTMLElement): void {
+    const text: string = value.textContent;
+    this.clipboard.copy(text);
   }
 
 }

@@ -9,15 +9,20 @@ import { collection } from '@firebase/firestore';
 })
 export class AppComponent {
   userLength: number;
+  contactLength = 0;
+  hidden = false;
 
   constructor(private firestore: Firestore) { }
 
   ngOnInit(): void {
-    this.contactsLength();
+    this.checkLength();
+    if (this.contactLength == 0) {
+      this.hidden = !this.hidden;
+    }
   }
 
 
-  async contactsLength() {
+  async checkLength() {
     const userCollection = collection(this.firestore, 'users');
     const docsSnap = await getDocs(userCollection);
 

@@ -5,13 +5,18 @@
 
     <mat-menu #headerMenu="matMenu">
         <button mat-menu-item (click)="editUserName()">Edit</button>
-        <button mat-menu-item>Copy</button>
     </mat-menu>
 
     <img src="assets/img/profile-woman.png" alt="">
     <div class="user-details">
-        <h2>{{ user.firstName }} {{ user.lastName }}</h2>
-        <span>{{ user.email }}</span>
+        <div class="d-flex">
+            <h2 #nameCopy>{{ user.firstName }} {{ user.lastName }}</h2>
+            <mat-icon class="copy-icon" (click)="copyToClipboard(nameCopy)" title="Copy Name">content_copy</mat-icon>
+        </div>
+        <div class="d-flex">
+            <span #emailCopy>{{ user.email }}</span>
+            <mat-icon class="copy-icon" (click)="copyToClipboard(emailCopy)" title="Copy E-Mail">content_copy</mat-icon>
+        </div>
     </div>
 </mat-card>
 
@@ -21,14 +26,18 @@
     </button>
     <mat-menu #addressMenu="matMenu">
         <button mat-menu-item (click)="editAddress()">Edit</button>
-        <button mat-menu-item>Copy</button>
     </mat-menu>
 
-    <mat-card-title>Address</mat-card-title> <br>
+    <div style="display: flex">
+        <mat-card-title>Address</mat-card-title>
+        <mat-icon class="copy-icon" (click)="copyToClipboard(copyAddress)" title="Copy Address">content_copy</mat-icon>
+    </div>
+    <br>
 
     <mat-card-content>
         <span>{{ user.street }}</span> <br>
         <span>{{ user.zipCode }} {{ user.city }}</span> <br>
         <span>{{ user.country }}</span>
+        <span #copyAddress style="display: none"> {{ user.street }}, {{ user.zipCode }} {{ user.city }}, {{ user.country }} </span>
     </mat-card-content>
 </mat-card>

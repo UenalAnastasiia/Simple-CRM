@@ -1,6 +1,6 @@
 .user-details-header {
     min-height: 250px;
-    background-color: rgb(0,103,60);
+    background-color: rgb(0, 103, 60);
     color: white;
     display: flex;
     align-items: flex-end;
@@ -22,7 +22,7 @@
     justify-content: center;
 
     h2 {
-        margin-bottom: 0;
+        margin-bottom: 8px;
     }
 }
 
@@ -30,4 +30,15 @@
     position: absolute;
     right: 0;
     top: 0;
+}
+
+.copy-icon {
+    font-size: 16px;
+    margin-left: 8px;
+    margin-top: -8px;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
 }

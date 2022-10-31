@@ -27,7 +27,8 @@
     padding-bottom: 16px;
 }
 
-mat-toolbar, mat-toolbar-row {
+mat-toolbar,
+mat-toolbar-row {
     min-height: 56px;
     height: 56px;
 }
@@ -45,6 +46,11 @@ mat-toolbar, mat-toolbar-row {
         display: flex;
         align-items: center;
         cursor: pointer;
+
+        span {
+            color: #747070;
+            font-weight: 500;
+        }
 
         mat-icon {
             margin-right: 16px;
@@ -64,4 +70,3 @@ mat-toolbar, mat-toolbar-row {
     padding-right: 56px;
     padding-top: 16px;
 }
-

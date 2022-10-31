@@ -32,6 +32,7 @@ import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.com
 import { MatSelectModule } from '@angular/material/select';
 import { TimeBoardComponent } from './time-board/time-board.component';
 import { MatBadgeModule } from '@angular/material/badge';
+import { ClipboardModule } from '@angular/cdk/clipboard';
 
 
 @NgModule({
@@ -65,6 +66,7 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatMenuModule,
     MatSelectModule,
     MatBadgeModule,
+    ClipboardModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),

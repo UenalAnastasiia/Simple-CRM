@@ -18,7 +18,7 @@
                 <span>Task</span>
             </li>
             <li routerLink="/user">
-                <mat-icon matBadge="{{ 0 }}" matBadgeColor="primary">business_center</mat-icon>
+                <mat-icon matBadge="{{ contactLength }}" matBadgeColor="primary" [matBadgeHidden]="hidden">business_center</mat-icon>
                 <span>Project</span>
             </li>
         </ul>

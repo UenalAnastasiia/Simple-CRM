@@ -9,15 +9,16 @@ import { collection, Firestore, getDocs } from '@angular/fire/firestore';
 })
 export class DashboardComponent implements OnInit {
   userLength: number;
+  contactLength = 0;
 
   constructor(private firestore: Firestore) { }
 
   ngOnInit(): void {
-    this.contactsLength();
+    this.checkLength();
   }
 
 
-  async contactsLength() {
+  async checkLength() {
     const userCollection = collection(this.firestore, 'users');
     const docsSnap = await getDocs(userCollection);
 
