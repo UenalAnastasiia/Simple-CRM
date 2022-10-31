@@ -11,11 +11,11 @@
     <div class="user-details">
         <div class="d-flex">
             <h2 #nameCopy>{{ user.firstName }} {{ user.lastName }}</h2>
-            <mat-icon class="copy-icon" (click)="copyToClipboard(nameCopy)" title="Copy Name" (click)="openCopyWindow()">content_copy</mat-icon>
+            <mat-icon class="copy-icon" (click)="copyToClipboard(nameCopy)" title="Copy Name" (click)="showCopyBar()">content_copy</mat-icon>
         </div>
         <div class="d-flex">
             <span #emailCopy>{{ user.email }}</span>
-            <mat-icon class="copy-icon" (click)="copyToClipboard(emailCopy)" title="Copy E-Mail" (click)="openCopyWindow()">content_copy</mat-icon>
+            <mat-icon class="copy-icon" (click)="copyToClipboard(emailCopy)" title="Copy E-Mail" (click)="showCopyBar()">content_copy</mat-icon>
         </div>
     </div>
 </mat-card>
@@ -30,7 +30,7 @@
 
     <div style="display: flex">
         <mat-card-title>Address</mat-card-title>
-        <mat-icon class="copy-icon" (click)="copyToClipboard(copyAddress)" title="Copy Address" (click)="openCopyWindow()">content_copy</mat-icon>
+        <mat-icon class="copy-icon" (click)="copyToClipboard(copyAddress)" title="Copy Address" (click)="showCopyBar()">content_copy</mat-icon>
     </div>
     <br>
 

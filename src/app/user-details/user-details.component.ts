@@ -22,7 +22,7 @@ export class UserDetailsComponent implements OnInit {
   verticalPosition: MatSnackBarVerticalPosition = 'top';
 
 
-  constructor(private route: ActivatedRoute, private firestore: Firestore, public dialog: MatDialog, private clipboard: Clipboard, private _snackBar: MatSnackBar) { }
+  constructor(private route: ActivatedRoute, private firestore: Firestore, public dialog: MatDialog, private clipboard: Clipboard, private copyBar: MatSnackBar) { }
 
 
   ngOnInit(): void {
@@ -63,8 +63,8 @@ export class UserDetailsComponent implements OnInit {
   }
 
 
-  openCopyWindow() {
-    this._snackBar.openFromComponent(CopyMessageComponent, {
+  showCopyBar() {
+    this.copyBar.openFromComponent(CopyMessageComponent, {
       duration: 1000,
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition
