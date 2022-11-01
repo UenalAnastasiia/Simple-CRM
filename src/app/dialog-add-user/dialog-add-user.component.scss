@@ -36,3 +36,28 @@
         }
     }
 }
+
+.example-radio-group {
+    display: flex;
+    margin: 4px 0;
+    align-items: flex-start;
+  }
+  
+  .example-radio-button {
+    margin-right: 16px;
+
+    &:first-child {
+        margin-left: 12px;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+  }
+
+  form {
+    label {
+    margin-left: -22px;
+    margin-right: 22px;
+  }
+}

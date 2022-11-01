@@ -35,6 +35,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CopyMessageComponent } from './copy-message/copy-message.component';
+import { MatRadioModule } from '@angular/material/radio';
 
 
 @NgModule({
@@ -71,6 +72,7 @@ import { CopyMessageComponent } from './copy-message/copy-message.component';
     MatBadgeModule,
     ClipboardModule,
     MatSnackBarModule,
+    MatRadioModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),

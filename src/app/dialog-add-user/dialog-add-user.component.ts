@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from 'src/models/user.class';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Firestore } from '@angular/fire/firestore';
-import { collection, addDoc } from "firebase/firestore"; 
+import { collection, addDoc } from "firebase/firestore";
 import { countries } from 'src/assets/store/country-data-store';
 
 @Component({
@@ -16,10 +16,18 @@ export class DialogAddUserComponent implements OnInit {
   birthDate: Date;
   loading: boolean = false;
   countries: any = countries;
-  
-  constructor(public dialogRef: MatDialogRef<DialogAddUserComponent>, private firestore: Firestore) { }
+  gender: any;
+
+
+  constructor(public dialogRef: MatDialogRef<DialogAddUserComponent>, private firestore: Firestore) {
+  }
 
   ngOnInit(): void { }
+
+  genderForm(value: any) {
+    this.user.gender = value;
+  }
+
 
   async saveUser() {
     this.user.birthDate = this.birthDate.getTime();
