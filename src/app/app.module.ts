@@ -37,6 +37,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CopyMessageComponent } from './copy-message/copy-message.component';
 import { MatRadioModule } from '@angular/material/radio';
 import { DialogEditPersonalInfoComponent } from './dialog-edit-personal-info/dialog-edit-personal-info.component';
+import { AddTaskComponent } from './add-task/add-task.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { DialogEditPersonalInfoComponent } from './dialog-edit-personal-info/dia
     DialogEditUserComponent,
     TimeBoardComponent,
     CopyMessageComponent,
-    DialogEditPersonalInfoComponent
+    DialogEditPersonalInfoComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
