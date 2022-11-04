@@ -70,5 +70,4 @@ export class UserDetailsComponent implements OnInit {
       verticalPosition: this.verticalPosition
     });
   }
-
 }

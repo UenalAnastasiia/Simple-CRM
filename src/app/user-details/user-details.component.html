@@ -1,4 +1,5 @@
 <mat-card class="user-details-header">
+    <!----------- HEADER ------------>
     <button mat-icon-button class="pin-right-upper-corner" [matMenuTriggerFor]="headerMenu">
         <mat-icon>more_vert</mat-icon>
     </button>
@@ -11,15 +12,18 @@
     <div class="user-details">
         <div class="d-flex">
             <h2 #nameCopy>{{ user.firstName }} {{ user.lastName }}</h2>
-            <mat-icon class="copy-icon" (click)="copyToClipboard(nameCopy)" title="Copy Name" (click)="showCopyBar()">content_copy</mat-icon>
+            <mat-icon class="copy-icon" (click)="copyToClipboard(nameCopy)" title="Copy Name" (click)="showCopyBar()">
+                content_copy</mat-icon>
         </div>
         <div class="d-flex">
             <span #emailCopy>{{ user.email }}</span>
-            <mat-icon class="copy-icon" (click)="copyToClipboard(emailCopy)" title="Copy E-Mail" (click)="showCopyBar()">content_copy</mat-icon>
+            <mat-icon class="copy-icon" (click)="copyToClipboard(emailCopy)" title="Copy E-Mail"
+                (click)="showCopyBar()">content_copy</mat-icon>
         </div>
     </div>
 </mat-card>
 
+<!----------- ADDRESS ------------>
 <mat-card class="margin-top-32">
     <button mat-icon-button class="pin-right-upper-corner" [matMenuTriggerFor]="addressMenu">
         <mat-icon>more_vert</mat-icon>
@@ -30,7 +34,8 @@
 
     <div style="display: flex">
         <mat-card-title>Address</mat-card-title>
-        <mat-icon class="copy-icon" (click)="copyToClipboard(copyAddress)" title="Copy Address" (click)="showCopyBar()">content_copy</mat-icon>
+        <mat-icon class="copy-icon" (click)="copyToClipboard(copyAddress)" title="Copy Address" (click)="showCopyBar()">
+            content_copy</mat-icon>
     </div>
     <br>
 
@@ -38,6 +43,20 @@
         <span>{{ user.street }}</span> <br>
         <span>{{ user.zipCode }} {{ user.city }}</span> <br>
         <span>{{ user.country }}</span>
-        <span #copyAddress style="display: none"> {{ user.street }}, {{ user.zipCode }} {{ user.city }}, {{ user.country }} </span>
+        <span #copyAddress style="display: none"> {{ user.street }}, {{ user.zipCode }} {{ user.city }}, {{ user.country
+            }} </span>
+    </mat-card-content>
+</mat-card>
+
+<!----------- PERSONAL INFORMATION ------------>
+<mat-card class="margin-top-32">
+    <div style="display: flex">
+        <mat-card-title>Personal Information</mat-card-title>
+    </div>
+    <br>
+
+    <mat-card-content>
+        <span> <b> Gender: </b> {{ user.gender }}</span> <br>
+        <span> <b> Birth Date: </b> {{ user.birthDate | date: "dd/MM/yyyy" }}</span>
     </mat-card-content>
 </mat-card>

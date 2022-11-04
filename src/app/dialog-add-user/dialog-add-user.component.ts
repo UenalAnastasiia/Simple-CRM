@@ -4,6 +4,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { Firestore } from '@angular/fire/firestore';
 import { collection, addDoc } from "firebase/firestore";
 import { countries } from 'src/assets/store/country-data-store';
+import { MatRadioChange } from '@angular/material/radio';
 
 @Component({
   selector: 'app-dialog-add-user',
@@ -24,8 +25,9 @@ export class DialogAddUserComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  genderForm(value: any) {
-    this.user.gender = value;
+
+  onChange(event: MatRadioChange) {
+    this.user.gender = event.value;
   }
 
 
