@@ -15,7 +15,9 @@ export class AddTaskComponent implements OnInit {
   startDate: Date;
   value: any;
 
-  constructor(private firestore: Firestore) { }
+  constructor(private firestore: Firestore) {
+    console.log('Tasks: ', this.task)
+   }
 
   ngOnInit(): void {
 
