@@ -50,6 +50,13 @@
 
 <!----------- PERSONAL INFORMATION ------------>
 <mat-card class="margin-top-32">
+    <button mat-icon-button class="pin-right-upper-corner" [matMenuTriggerFor]="personalMenu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #personalMenu="matMenu">
+        <button mat-menu-item (click)="editPersonal()">Edit</button>
+    </mat-menu>
+
     <div style="display: flex">
         <mat-card-title>Personal Information</mat-card-title>
     </div>

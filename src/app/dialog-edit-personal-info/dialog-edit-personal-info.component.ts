@@ -5,26 +5,28 @@ import { MatRadioChange } from '@angular/material/radio';
 import { User } from 'src/models/user.class';
 
 @Component({
-  selector: 'app-dialog-edit-user',
-  templateUrl: './dialog-edit-user.component.html',
-  styleUrls: ['./dialog-edit-user.component.scss']
+  selector: 'app-dialog-edit-personal-info',
+  templateUrl: './dialog-edit-personal-info.component.html',
+  styleUrls: ['./dialog-edit-personal-info.component.scss']
 })
-export class DialogEditUserComponent implements OnInit {
-  
+export class DialogEditPersonalInfoComponent implements OnInit {
   user: User;
   loading: boolean = false;
+  birthDate: Date;
 
-  constructor(public dialogRef: MatDialogRef<DialogEditUserComponent>, private firestore: Firestore) { }
+  constructor(public dialogRef: MatDialogRef<DialogEditPersonalInfoComponent>, private firestore: Firestore) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+  }
 
 
   onChange(event: MatRadioChange) {
     this.user.gender = event.value;
   }
-  
+
 
   async saveUser() {
+    this.user.birthDate = this.birthDate.getTime();
     await setDoc(doc(this.firestore, "users", this.user.id), this.user.toJSON());
     this.loading = true;
     this.closeDialog();

@@ -36,6 +36,7 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CopyMessageComponent } from './copy-message/copy-message.component';
 import { MatRadioModule } from '@angular/material/radio';
+import { DialogEditPersonalInfoComponent } from './dialog-edit-personal-info/dialog-edit-personal-info.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { MatRadioModule } from '@angular/material/radio';
     DialogEditAddressComponent,
     DialogEditUserComponent,
     TimeBoardComponent,
-    CopyMessageComponent
+    CopyMessageComponent,
+    DialogEditPersonalInfoComponent
   ],
   imports: [
     BrowserModule,

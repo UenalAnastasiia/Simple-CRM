@@ -1,0 +1,19 @@
+.dialog-container {
+    position: relative;
+
+    .progress-bar-edit-box {
+        position: absolute;
+        left: -24px;
+        right: -24px;
+        top: -24px;
+        width: calc(100% + 48px);
+    }
+}
+
+mat-form-field {
+    width: 300px;
+
+    mat-radio-button {
+        margin-right: 24px;
+    }
+}

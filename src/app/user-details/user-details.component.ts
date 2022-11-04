@@ -8,6 +8,7 @@ import { DialogEditAddressComponent } from '../dialog-edit-address/dialog-edit-a
 import { DialogEditUserComponent } from '../dialog-edit-user/dialog-edit-user.component';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 import { CopyMessageComponent } from '../copy-message/copy-message.component';
+import { DialogEditPersonalInfoComponent } from '../dialog-edit-personal-info/dialog-edit-personal-info.component';
 
 @Component({
   selector: 'app-user-details',
@@ -52,6 +53,13 @@ export class UserDetailsComponent implements OnInit {
 
   editAddress() {
     const dialog = this.dialog.open(DialogEditAddressComponent);
+    dialog.componentInstance.user = new User(this.user.toJSON());
+    dialog.componentInstance.user.id = this.userID;
+  }
+
+
+  editPersonal() {
+    const dialog = this.dialog.open(DialogEditPersonalInfoComponent);
     dialog.componentInstance.user = new User(this.user.toJSON());
     dialog.componentInstance.user.id = this.userID;
   }
