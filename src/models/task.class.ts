@@ -6,6 +6,7 @@ export class Task {
     deadlineDate: number;
     location: string;
     department: string;
+    employee: string;
     id: string;
 
     // obj? => if Object exist
@@ -17,6 +18,7 @@ export class Task {
         this.deadlineDate = obj ? obj.deadlineDate : '';
         this.location = obj ? obj.location : '';
         this.department = obj ? obj.department : '';
+        this.employee = obj ? obj.employee : '';
         this.id = obj ? obj.id : '';
     }
 
@@ -29,6 +31,7 @@ export class Task {
             deadlineDate: this.deadlineDate,
             location: this.location,
             department: this.department,
+            employee: this.employee,
             id: this.id
         }
     }

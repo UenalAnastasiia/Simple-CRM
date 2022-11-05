@@ -15,13 +15,9 @@ export class AddTaskComponent implements OnInit {
   startDate: Date;
   value: any;
 
-  constructor(private firestore: Firestore) {
-    console.log('Tasks: ', this.task)
-   }
+  constructor(private firestore: Firestore) { }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void { }
 
 
   onChange(event: MatRadioChange) {
@@ -32,7 +28,7 @@ export class AddTaskComponent implements OnInit {
     this.task.department = value;
   }
 
-  
+
   async saveTask() {
     this.task.startDate = this.startDate.getTime();
     this.task.deadlineDate = this.deadlineDate.getTime();
