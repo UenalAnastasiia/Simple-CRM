@@ -38,6 +38,7 @@ import { CopyMessageComponent } from './copy-message/copy-message.component';
 import { MatRadioModule } from '@angular/material/radio';
 import { DialogEditPersonalInfoComponent } from './dialog-edit-personal-info/dialog-edit-personal-info.component';
 import { AddTaskComponent } from './add-task/add-task.component';
+import { AddTaskMessageComponent } from './add-task-message/add-task-message.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { AddTaskComponent } from './add-task/add-task.component';
     TimeBoardComponent,
     CopyMessageComponent,
     DialogEditPersonalInfoComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    AddTaskMessageComponent
   ],
   imports: [
     BrowserModule,
