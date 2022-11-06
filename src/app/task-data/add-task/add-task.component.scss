@@ -5,12 +5,16 @@
     align-items: center;
 }
 
+mat-card {
+    margin-bottom: 12px;
+}
+
 .form-box {
     display: flex;
     flex-direction: column;
 
     textarea {
-        height: 100px;
+        height: 80px;
     }
 }
 

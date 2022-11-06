@@ -3,24 +3,24 @@
         <app-time-board></app-time-board>
     </div>
 
-    <div class="user-box">
-        <button mat-raised-button color="primary" routerLink="/user">
-            <mat-icon>cloud_done</mat-icon>
-            <span class="number"><b> {{ userLength }} </b></span> <span class="activeUser"> Active Users in list</span>
-        </button>
+    <div class="summary-box">
+        <div class="user-box mr-56">
+            <button mat-raised-button color="primary" routerLink="/user">
+                <mat-icon>cloud_done</mat-icon>
+                <span class="number"><b> {{ userLength }} </b></span> <span class="activeUser"> Active Users in
+                    list</span>
+            </button>
+        </div>
+
+        <div class="task-box ml-56">
+            <button mat-raised-button color="primary" routerLink="/task">
+                <mat-icon>cloud_done</mat-icon>
+                <span class="number"><b> {{ taskLength }} </b></span> <span class="activeUser"> Tasks in progress</span>
+            </button>
+        </div>
     </div>
 
-    <div class="user-box">
-        <button mat-raised-button color="primary" routerLink="/task">
-            <mat-icon>cloud_done</mat-icon>
-            <span class="number"><b> {{ taskLength }} </b></span> <span class="activeUser"> Tasks in progress</span>
-        </button>
-    </div>
-
-    <div class="user-box">
-        <button mat-raised-button color="primary" routerLink="/user">
-            <mat-icon>cloud_done</mat-icon>
-            <span class="number"><b> {{ contactLength }} </b></span> <span class="activeUser"> Projects in work</span>
-        </button>
+    <div>
+        <app-task-board></app-task-board> 
     </div>
 </div>

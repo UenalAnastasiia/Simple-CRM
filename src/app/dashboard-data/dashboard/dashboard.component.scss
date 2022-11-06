@@ -2,10 +2,16 @@
     display: flex;
     flex-direction: column;
 }
-.user-box {
-    margin-top: 32px;
-    margin-left: 56px;
 
+.summary-box {
+    display: flex;
+    justify-content: center;
+    margin-left: -108px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.task-box, .user-box {
     .number {
         font-size: 36px;
         color: #be2a2a;
@@ -28,4 +34,12 @@
         width: 36px;
         height: 36px;
     }
+}
+
+.ml-56 {
+    margin-left: 56px;
+}
+
+.mr-56 {
+    margin-right: 56px;
 }

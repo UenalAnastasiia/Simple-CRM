@@ -1,0 +1,20 @@
+<div class="task-container">
+    <div class="task-header">
+        <mat-icon>push_pin</mat-icon>
+        <mat-card>
+            <h1>Task Board</h1>
+        </mat-card>
+        <mat-icon>push_pin</mat-icon>
+    </div>
+
+    <div class="task-board">
+        <div class="pos-relativ" *ngFor="let task of allTasks" [routerLink]="['/task/' + task.taskID]">
+            <mat-icon>push_pin</mat-icon>
+            <mat-card class="task-card" [style.background-color]="getCardColor(task.priority)" >
+                <span>Title: {{ task.title }}</span> <br>
+                <span>Priority: {{ task.priority }}</span> <br>
+                <span>Department: {{ task.department }}</span>
+            </mat-card>
+        </div>
+    </div>
+</div>

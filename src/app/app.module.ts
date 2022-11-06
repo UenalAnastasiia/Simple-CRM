@@ -39,6 +39,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { DialogEditPersonalInfoComponent } from './user-data/dialog-edit-personal-info/dialog-edit-personal-info.component';
 import { AddTaskComponent } from './task-data/add-task/add-task.component';
 import { AddTaskMessageComponent } from './task-data/add-task-message/add-task-message.component';
+import { TaskBoardComponent } from './dashboard-data/task-board/task-board.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { AddTaskMessageComponent } from './task-data/add-task-message/add-task-m
     CopyMessageComponent,
     DialogEditPersonalInfoComponent,
     AddTaskComponent,
-    AddTaskMessageComponent
+    AddTaskMessageComponent,
+    TaskBoardComponent
   ],
   imports: [
     BrowserModule,

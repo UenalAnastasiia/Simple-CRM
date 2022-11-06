@@ -1,0 +1,59 @@
+.task-container {
+    background-image: url('/../assets/img/taskboard.jpg');
+    margin-left: -56px;
+    margin-bottom: 32px;
+    width: calc(100% + 112px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .task-header {
+        margin-top: 32px;
+        margin-bottom: 32px;
+        position: relative;
+
+        mat-icon {
+            position: absolute;
+            z-index: 1;
+            top: -12px;
+            font-size: 30px;
+            color: #be2a2a;
+
+            &:first-child {
+                transform: rotate(-24deg);
+            }
+
+            &:last-child {
+                right: 4px;
+                transform: rotate(24deg);
+            }
+        }
+
+        h1 {
+            width: max-content;
+            margin: 0;
+            font-size: 32px;
+            font-weight: 600;
+        }
+    }
+}
+
+.task-board {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    mat-icon {
+        position: absolute;
+        top: 12px;
+        left: 120px;
+        z-index: 1;
+        font-size: 30px;
+        color: #be2a2a;
+    }
+}
+
+.task-card {
+    margin: 24px;
+    width: 200px;
+}

@@ -1,90 +1,92 @@
 <div class="dialog-container">
-    <mat-progress-bar class="progress-bar-add-box" mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+    <mat-card>
+        <mat-progress-bar class="progress-bar-add-box" mode="indeterminate" *ngIf="loading"></mat-progress-bar>
 
-    <h1 mat-dialog-title>Add Task</h1>
-    <div mat-dialog-content>
-        <div class="form-box">
-            <mat-form-field class="name-form-field" appearance="outline">
-                <mat-label>Title</mat-label>
-                <input [disabled]="loading" [(ngModel)]="task.title" matInput>
-            </mat-form-field>
-
-            <mat-form-field appearance="outline" class="name-form-field">
-                <mat-label>Description</mat-label>
-                <textarea [disabled]="loading" [(ngModel)]="task.description" matInput></textarea>
-            </mat-form-field>
-        </div>
-
-        <div>
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Priority</mat-label>
-                <input [(ngModel)]="task.priority" matInput class="hidden">
-                <mat-radio-group class="example-radio-group" [(ngModel)]="task.priority" (change)="onChange($event)"
-                    appearance="outline" class="full-width">
-                    <mat-radio-button color="primary" class="example-radio-button" value="Low"> Low
-                    </mat-radio-button>
-                    <mat-radio-button color="primary" class="example-radio-button" value="Middle"> Middle
-                    </mat-radio-button>
-                    <mat-radio-button color="primary" class="example-radio-button" value="High"> High
-                    </mat-radio-button>
-                </mat-radio-group>
-            </mat-form-field>
-        </div>
-
-        <div class="d-flex date-container">
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Start Date</mat-label>
-                <input [disabled]="loading" [(ngModel)]="startDate" matInput [matDatepicker]="picker1">
-                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-                <mat-datepicker #picker1></mat-datepicker>
-            </mat-form-field>
-
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Deadline Date</mat-label>
-                <input [disabled]="loading" [(ngModel)]="deadlineDate" matInput [matDatepicker]="picker2">
-                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-                <mat-datepicker #picker2></mat-datepicker>
-            </mat-form-field>
-        </div>
-
-        <div>
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Location</mat-label>
-                <input [disabled]="loading" [(ngModel)]="task.location" matInput>
-            </mat-form-field>
-        </div>
-
-        <div class="department-user">
-            <div class="full-width">
-                <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>Department</mat-label>
-                    <mat-select class="example-radio-group" [(ngModel)]="task.department"
-                        (change)="selectionChange(value)" appearance="outline" class="full-width">
-                        <mat-option color="primary" class="example-radio-button" value="Front-End"> Front-End
-                        </mat-option>
-                        <mat-option color="primary" class="example-radio-button" value="Back-End"> Back-End
-                        </mat-option>
-                        <mat-option color="primary" class="example-radio-button" value="Design"> Design
-                        </mat-option>
-                        <mat-option color="primary" class="example-radio-button" value="Finance"> Finance
-                        </mat-option>
-                        <mat-option color="primary" class="example-radio-button" value="Marketing"> Marketing
-                        </mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </div>
-
-            <div class="full-width add-user-box">
+        <h1 mat-dialog-title>Add Task</h1>
+        <div mat-dialog-content>
+            <div class="form-box">
                 <mat-form-field class="name-form-field" appearance="outline">
-                    <mat-label>Add Employee</mat-label>
-                    <input [disabled]="loading" [(ngModel)]="task.employee" matInput>
+                    <mat-label>Title</mat-label>
+                    <input [disabled]="loading" [(ngModel)]="task.title" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="name-form-field">
+                    <mat-label>Description</mat-label>
+                    <textarea [disabled]="loading" [(ngModel)]="task.description" matInput></textarea>
                 </mat-form-field>
             </div>
-        </div>
-    </div>
 
-    <div mat-dialog-actions>
-        <button [disabled]="loading" mat-button>Cancel</button>
-        <button [disabled]="loading" type="submit" mat-button cdkFocusInitial (click)="saveTask()">Save</button>
-    </div>
+            <div>
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Priority</mat-label>
+                    <input [(ngModel)]="task.priority" matInput class="hidden">
+                    <mat-radio-group class="example-radio-group" [(ngModel)]="task.priority" (change)="onChange($event)"
+                        appearance="outline" class="full-width">
+                        <mat-radio-button color="primary" class="example-radio-button" value="Low"> Low
+                        </mat-radio-button>
+                        <mat-radio-button color="primary" class="example-radio-button" value="Middle"> Middle
+                        </mat-radio-button>
+                        <mat-radio-button color="primary" class="example-radio-button" value="High"> High
+                        </mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+
+            <div class="d-flex date-container">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Start Date</mat-label>
+                    <input [disabled]="loading" [(ngModel)]="startDate" matInput [matDatepicker]="picker1">
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Deadline Date</mat-label>
+                    <input [disabled]="loading" [(ngModel)]="deadlineDate" matInput [matDatepicker]="picker2">
+                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Location</mat-label>
+                    <input [disabled]="loading" [(ngModel)]="task.location" matInput>
+                </mat-form-field>
+            </div>
+
+            <div class="department-user">
+                <div class="full-width">
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Department</mat-label>
+                        <mat-select class="example-radio-group" [(ngModel)]="task.department"
+                            (change)="selectionChange(value)" appearance="outline" class="full-width">
+                            <mat-option color="primary" class="example-radio-button" value="Front-End"> Front-End
+                            </mat-option>
+                            <mat-option color="primary" class="example-radio-button" value="Back-End"> Back-End
+                            </mat-option>
+                            <mat-option color="primary" class="example-radio-button" value="Design"> Design
+                            </mat-option>
+                            <mat-option color="primary" class="example-radio-button" value="Finance"> Finance
+                            </mat-option>
+                            <mat-option color="primary" class="example-radio-button" value="Marketing"> Marketing
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="full-width add-user-box">
+                    <mat-form-field class="name-form-field" appearance="outline">
+                        <mat-label>Add Employee</mat-label>
+                        <input [disabled]="loading" [(ngModel)]="task.employee" matInput>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+        <div mat-dialog-actions>
+            <button [disabled]="loading" mat-button>Cancel</button>
+            <button [disabled]="loading" type="submit" mat-button cdkFocusInitial (click)="saveTask()">Save</button>
+        </div>
+    </mat-card>
 </div>
