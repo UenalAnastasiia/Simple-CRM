@@ -62,6 +62,7 @@ export class UserDetailsComponent implements OnInit {
     const dialog = this.dialog.open(DialogEditPersonalInfoComponent);
     dialog.componentInstance.user = new User(this.user.toJSON());
     dialog.componentInstance.user.id = this.userID;
+    dialog.componentInstance.currentBirthDate = this.user.birthDate;
   }
 
 

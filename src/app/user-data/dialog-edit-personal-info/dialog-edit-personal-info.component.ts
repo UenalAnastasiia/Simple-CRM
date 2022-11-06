@@ -12,12 +12,13 @@ import { User } from 'src/models/user.class';
 export class DialogEditPersonalInfoComponent implements OnInit {
   user: User;
   loading: boolean = false;
-  birthDate: Date;
+  updateBirthDate: any;
+  currentBirthDate: any;
 
+  
   constructor(public dialogRef: MatDialogRef<DialogEditPersonalInfoComponent>, private firestore: Firestore) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 
   onChange(event: MatRadioChange) {
@@ -26,12 +27,22 @@ export class DialogEditPersonalInfoComponent implements OnInit {
 
 
   async saveUser() {
-    this.user.birthDate = this.birthDate.getTime();
+    this.checkBirthday();
     await setDoc(doc(this.firestore, "users", this.user.id), this.user.toJSON());
     this.loading = true;
     this.closeDialog();
     this.reloadUserData();
   }
+
+
+  checkBirthday() {
+    if (!this.updateBirthDate) {
+      this.user.birthDate = this.currentBirthDate;
+    } else {
+      this.user.birthDate = this.updateBirthDate.getTime();
+    }
+  }
+
 
 
   closeDialog() {

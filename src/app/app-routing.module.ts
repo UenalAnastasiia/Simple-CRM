@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddTaskComponent } from './add-task/add-task.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { UserDetailsComponent } from './user-details/user-details.component';
-import { UserComponent } from './user/user.component';
+import { AddTaskComponent } from './task-data/add-task/add-task.component';
+import { DashboardComponent } from './dashboard-data/dashboard/dashboard.component';
+import { UserDetailsComponent } from './user-data/user-details/user-details.component';
+import { UserComponent } from './user-data/user/user.component';
 
 const routes: Routes = [ 
   { path: '', component: DashboardComponent },

@@ -19,6 +19,7 @@ export class AddTaskComponent implements OnInit {
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
 
+  
   constructor(private firestore: Firestore, private taskMessage: MatSnackBar) { }
 
   ngOnInit(): void { }
@@ -27,6 +28,7 @@ export class AddTaskComponent implements OnInit {
   onChange(event: MatRadioChange) {
     this.task.priority = event.value;
   }
+
 
   selectionChange(value: any) {
     this.task.department = value;
