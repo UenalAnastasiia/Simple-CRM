@@ -44,7 +44,6 @@ export class DialogEditPersonalInfoComponent implements OnInit {
   }
 
 
-
   closeDialog() {
     setTimeout(() => {
       this.loading = false;

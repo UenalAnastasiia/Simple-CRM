@@ -41,6 +41,7 @@ import { AddTaskComponent } from './task-data/add-task/add-task.component';
 import { AddTaskMessageComponent } from './task-data/add-task-message/add-task-message.component';
 import { TaskBoardComponent } from './dashboard-data/task-board/task-board.component';
 import { TaskDetailsComponent } from './task-data/task-details/task-details.component';
+import { DialogEditTaskComponent } from './dialog-edit-task/dialog-edit-task.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { TaskDetailsComponent } from './task-data/task-details/task-details.comp
     AddTaskComponent,
     AddTaskMessageComponent,
     TaskBoardComponent,
-    TaskDetailsComponent
+    TaskDetailsComponent,
+    DialogEditTaskComponent
   ],
   imports: [
     BrowserModule,

@@ -84,7 +84,7 @@
 
         <div mat-dialog-actions class="btn-box">
             <button [disabled]="loading" type="submit" mat-button cdkFocusInitial>Delete Task</button>
-            <button [disabled]="loading" type="submit" mat-button cdkFocusInitial>Edit Task</button>
+            <button [disabled]="loading" type="submit" mat-button cdkFocusInitial (click)="editTask()">Edit Task</button>
         </div>
     </mat-card>
 </div>

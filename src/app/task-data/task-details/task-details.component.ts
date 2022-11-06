@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { collection, collectionData, doc, Firestore, getDoc } from '@angular/fire/firestore';
+import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { DialogEditTaskComponent } from 'src/app/dialog-edit-task/dialog-edit-task.component';
 import { Task } from 'src/models/task.class';
 
 @Component({
@@ -24,7 +26,7 @@ export class TaskDetailsComponent implements OnInit {
   // verticalPosition: MatSnackBarVerticalPosition = 'top';
 
 
-  constructor(private route: ActivatedRoute, private firestore: Firestore) { }
+  constructor(private route: ActivatedRoute, private firestore: Firestore, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
@@ -42,6 +44,14 @@ export class TaskDetailsComponent implements OnInit {
     this.task = new Task(this.taskData);
     console.log('Show ', this.task)
     this.task.id = this.taskID;
+  }
+
+  editTask() {
+    const dialog = this.dialog.open(DialogEditTaskComponent);
+    dialog.componentInstance.task = new Task(this.task.toJSON());
+    dialog.componentInstance.task.id = this.taskID;
+    dialog.componentInstance.currentStarthDate = this.task.startDate;
+    dialog.componentInstance.currentDeadlineDate = this.task.deadlineDate;
   }
 
 
