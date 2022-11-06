@@ -56,4 +56,13 @@
 .task-card {
     margin: 24px;
     width: 200px;
+
+    &:hover {
+        cursor: pointer;
+        filter: brightness(1.2);
+    }
+
+    h2 {
+        font-weight: 600;
+    }
 }

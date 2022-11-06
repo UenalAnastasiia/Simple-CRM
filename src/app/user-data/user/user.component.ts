@@ -20,7 +20,7 @@ export class UserComponent implements OnInit {
   allUsers: any = [];
   userID: string;
 
-  constructor(public dialog: MatDialog, private firestore: Firestore, private route: ActivatedRoute,) { }
+  constructor(public dialog: MatDialog, private firestore: Firestore) { }
 
   ngOnInit(): void {
     const userCollection = collection(this.firestore, 'users');

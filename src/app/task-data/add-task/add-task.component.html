@@ -84,8 +84,7 @@
             </div>
         </div>
 
-        <div mat-dialog-actions>
-            <button [disabled]="loading" mat-button>Cancel</button>
+        <div mat-dialog-actions class="d-flex">
             <button [disabled]="loading" type="submit" mat-button cdkFocusInitial (click)="saveTask()">Save</button>
         </div>
     </mat-card>

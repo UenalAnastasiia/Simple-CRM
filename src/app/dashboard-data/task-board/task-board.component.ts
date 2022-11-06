@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { collection } from '@firebase/firestore';
 import { Observable } from 'rxjs';
+import { TaskDetailsComponent } from 'src/app/task-data/task-details/task-details.component';
 import { Task } from 'src/models/task.class';
 
 @Component({
@@ -19,7 +20,7 @@ export class TaskBoardComponent implements OnInit {
   taskID: string;
 
 
-  constructor(public dialog: MatDialog, private firestore: Firestore, private route: ActivatedRoute,) { }
+  constructor(public dialog: MatDialog, private firestore: Firestore) { }
 
   ngOnInit(): void {
     const taskCollection = collection(this.firestore, 'tasks');

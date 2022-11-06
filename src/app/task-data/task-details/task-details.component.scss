@@ -1,0 +1,88 @@
+.dialog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/../assets/img/plant.jpg');
+    background-size: cover;
+    margin-top: -16px;
+    margin-left: -56px;
+    width: calc(100% + 112px);
+    height: calc(100vh - 56px);
+}
+
+.form-flex {
+    display: flex;
+}
+
+mat-card {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    width: 60vw;
+}
+
+.left-form {
+    width: 30vw;
+    margin-right: 12px;
+}
+
+.right-form {
+    width: 30vw;
+    margin-left: 12px;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+
+    textarea {
+        height: 80px;
+    }
+}
+
+.date-container mat-form-field {
+    &:first-child {
+        margin-right: 4px;
+    }
+
+    &:last-child {
+        margin-left: 4px;
+    }
+}
+
+.example-radio-group {
+    display: flex;
+    margin: 4px 0;
+    align-items: flex-start;
+}
+
+.example-radio-button {
+    margin-right: 24px;
+
+    &:first-child {
+        margin-left: 12px;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.department-user {
+    display: flex;
+    width: 100%;
+}
+
+.department-box {
+    width: 100%;
+}
+
+.add-user-box {
+    margin-left: 48px;
+    width: 100%;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

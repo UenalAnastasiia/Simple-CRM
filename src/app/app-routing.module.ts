@@ -4,6 +4,7 @@ import { AddTaskComponent } from './task-data/add-task/add-task.component';
 import { DashboardComponent } from './dashboard-data/dashboard/dashboard.component';
 import { UserDetailsComponent } from './user-data/user-details/user-details.component';
 import { UserComponent } from './user-data/user/user.component';
+import { TaskDetailsComponent } from './task-data/task-details/task-details.component';
 
 const routes: Routes = [ 
   { path: '', component: DashboardComponent },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'user', component: UserComponent },
   { path: 'user/:id', component: UserDetailsComponent },
   { path: 'task', component: AddTaskComponent },
+  { path: 'task/:id', component: TaskDetailsComponent }
 ];
 
 @NgModule({

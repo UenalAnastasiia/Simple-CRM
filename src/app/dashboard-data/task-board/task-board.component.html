@@ -10,10 +10,10 @@
     <div class="task-board">
         <div class="pos-relativ" *ngFor="let task of allTasks" [routerLink]="['/task/' + task.taskID]">
             <mat-icon>push_pin</mat-icon>
-            <mat-card class="task-card" [style.background-color]="getCardColor(task.priority)" >
-                <span>Title: {{ task.title }}</span> <br>
-                <span>Priority: {{ task.priority }}</span> <br>
-                <span>Department: {{ task.department }}</span>
+            <mat-card class="task-card" [style.background-color]="getCardColor(task.priority)">
+                <h2> {{ task.title }}</h2> 
+                <span> <b> Department: </b> {{ task.department }}</span> <br>
+                <span> <b> Deadline: </b> {{ task.deadlineDate | date: "dd/MM/yyyy" }}</span>
             </mat-card>
         </div>
     </div>

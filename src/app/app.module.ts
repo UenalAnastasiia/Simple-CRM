@@ -40,6 +40,7 @@ import { DialogEditPersonalInfoComponent } from './user-data/dialog-edit-persona
 import { AddTaskComponent } from './task-data/add-task/add-task.component';
 import { AddTaskMessageComponent } from './task-data/add-task-message/add-task-message.component';
 import { TaskBoardComponent } from './dashboard-data/task-board/task-board.component';
+import { TaskDetailsComponent } from './task-data/task-details/task-details.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { TaskBoardComponent } from './dashboard-data/task-board/task-board.compo
     DialogEditPersonalInfoComponent,
     AddTaskComponent,
     AddTaskMessageComponent,
-    TaskBoardComponent
+    TaskBoardComponent,
+    TaskDetailsComponent
   ],
   imports: [
     BrowserModule,
