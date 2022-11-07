@@ -8,7 +8,7 @@
                 <div class="form-box">
                     <mat-form-field class="name-form-field" appearance="outline">
                         <mat-label>Title</mat-label>
-                        <input [disabled]="loading" [(ngModel)]="task.title" matInput readonly>
+                        <input class="title-input" [disabled]="loading" [(ngModel)]="task.title" matInput readonly>
                     </mat-form-field>
 
                     <mat-form-field appearance="outline" class="name-form-field">
@@ -16,7 +16,9 @@
                         <textarea [disabled]="loading" [(ngModel)]="task.description" matInput readonly></textarea>
                     </mat-form-field>
                 </div>
+            </div>
 
+            <div class="right-form">
                 <div>
                     <mat-form-field appearance="outline" class="full-width">
                         <mat-label>Priority</mat-label>
@@ -32,18 +34,18 @@
                         </mat-radio-group>
                     </mat-form-field>
                 </div>
-            </div>
 
-            <div class="right-form">
-                <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>Startdate</mat-label>
-                    <input [disabled]="loading" matInput readonly [value]="task.startDate | date:'dd/MM/yyyy'">
-                </mat-form-field>
+                <div class="d-flex date-container">
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Startdate</mat-label>
+                        <input [disabled]="loading" matInput readonly [value]="task.startDate | date:'dd/MM/yyyy'">
+                    </mat-form-field>
 
-                <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>Deadline</mat-label>
-                    <input [disabled]="loading" matInput readonly [value]="task.deadlineDate | date:'dd/MM/yyyy'">
-                </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Deadline</mat-label>
+                        <input [disabled]="loading" matInput readonly [value]="task.deadlineDate | date:'dd/MM/yyyy'">
+                    </mat-form-field>
+                </div>
 
                 <div>
                     <mat-form-field appearance="outline" class="full-width">
@@ -54,7 +56,7 @@
 
                 <div class="department-user">
                     <div class="full-width">
-                        <mat-form-field appearance="outline" class="full-width">
+                        <mat-form-field appearance="outline" class="dep-width">
                             <mat-label>Department</mat-label>
                             <mat-select class="example-radio-group" [(ngModel)]="task.department" appearance="outline"
                                 class="full-width" [disabled]="!editable">
@@ -72,8 +74,8 @@
                         </mat-form-field>
                     </div>
 
-                    <div class="full-width add-user-box">
-                        <mat-form-field class="name-form-field" appearance="outline">
+                    <div>
+                        <mat-form-field class="name-form-field dep-width" appearance="outline">
                             <mat-label>Employee</mat-label>
                             <input [disabled]="loading" [(ngModel)]="task.employee" matInput readonly>
                         </mat-form-field>
@@ -84,7 +86,8 @@
 
         <div mat-dialog-actions class="btn-box">
             <button [disabled]="loading" type="submit" mat-button cdkFocusInitial>Delete Task</button>
-            <button [disabled]="loading" type="submit" mat-button cdkFocusInitial (click)="editTask()">Edit Task</button>
+            <button [disabled]="loading" type="submit" mat-button cdkFocusInitial (click)="editTask()">Edit
+                Task</button>
         </div>
     </mat-card>
 </div>

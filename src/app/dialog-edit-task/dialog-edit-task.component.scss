@@ -1,0 +1,76 @@
+.dialog-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-flex {
+    display: flex;
+}
+
+.left-form {
+    width: 30vw;
+    margin-right: 12px;
+}
+
+.right-form {
+    width: 30vw;
+    margin-left: 12px;
+}
+
+mat-card {
+    margin-bottom: 12px;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+
+    textarea {
+        height: 194px;
+    }
+}
+
+.date-container mat-form-field {
+    &:first-child {
+        margin-right: 4px;
+        width: 220px;
+    }
+
+    &:last-child {
+        margin-left: 4px;
+        width: 220px;
+    }
+}
+
+.example-radio-group {
+    display: flex;
+    margin: 4px 0;
+    align-items: flex-start;
+}
+
+.example-radio-button {
+    margin-right: 24px;
+
+    &:first-child {
+        margin-left: 12px;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.department-user {
+    display: flex;
+    width: 100%;
+}
+
+.department-box {
+    width: 100%;
+}
+
+.dep-width {
+    width: 214px;
+}
