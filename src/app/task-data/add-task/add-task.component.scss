@@ -5,8 +5,22 @@
     align-items: center;
 }
 
+.form-flex {
+    display: flex;
+}
+
+.left-form {
+    width: 30vw;
+    margin-right: 12px;
+}
+
+.right-form {
+    width: 30vw;
+    margin-left: 12px;
+}
+
 mat-card {
-    margin-bottom: 12px;
+    margin-top: 60px;
 }
 
 .form-box {
@@ -14,17 +28,19 @@ mat-card {
     flex-direction: column;
 
     textarea {
-        height: 80px;
+        height: 194px;
     }
 }
 
 .date-container mat-form-field {
     &:first-child {
         margin-right: 4px;
+        width: 220px;
     }
 
     &:last-child {
         margin-left: 4px;
+        width: 220px;
     }
 }
 
@@ -55,7 +71,6 @@ mat-card {
     width: 100%;
 }
 
-.add-user-box {
-    margin-left: 70px;
-    width: 100%;
+.dep-width {
+    width: 220px;
 }

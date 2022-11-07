@@ -37,7 +37,7 @@ export class DialogEditTaskComponent implements OnInit {
   async saveTask() {
     this.checkStartDate();
     this.checkDeadlineDate();
-    await setDoc(doc(this.firestore, "users", this.task.id), this.task.toJSON());
+    await setDoc(doc(this.firestore, "tasks", this.task.id), this.task.toJSON());
     this.loading = true;
     this.closeDialog();
     this.reloadUserData();

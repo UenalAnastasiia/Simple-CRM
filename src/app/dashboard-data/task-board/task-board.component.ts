@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { collectionData, Firestore } from '@angular/fire/firestore';
 import { MatDialog } from '@angular/material/dialog';
-import { ActivatedRoute } from '@angular/router';
 import { collection } from '@firebase/firestore';
 import { Observable } from 'rxjs';
-import { TaskDetailsComponent } from 'src/app/task-data/task-details/task-details.component';
 import { Task } from 'src/models/task.class';
 
 @Component({
@@ -34,9 +32,9 @@ export class TaskBoardComponent implements OnInit {
 
 
   getCardColor(priority: string) {
-    switch(priority) {
+    switch (priority) {
       case 'Low': return '#ffff84';
-      case 'Middle': return '#7cfb7c';
+      case 'Middle': return 'rgb(25 241 255)';
       case 'High': return '#ee9090';
       default: return '';
     }

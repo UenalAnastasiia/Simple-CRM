@@ -13,6 +13,7 @@
             <mat-card class="task-card" [style.background-color]="getCardColor(task.priority)">
                 <h2> {{ task.title }}</h2> 
                 <span> <b> Department: </b> {{ task.department }}</span> <br>
+                <span> <b> Type: </b> {{ task.type }}</span> <br>
                 <span> <b> Deadline: </b> {{ task.deadlineDate | date: "dd/MM/yyyy" }}</span>
             </mat-card>
         </div>

@@ -58,7 +58,7 @@ export class AddTaskComponent implements OnInit {
 
   showTaskMessage() {
     this.taskMessage.openFromComponent(AddTaskMessageComponent, {
-      duration: 1000,
+      duration: 2000,
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition
     });
