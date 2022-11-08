@@ -17,7 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { MatMenuModule } from '@angular/material/menu';
 import { environment } from '../environments/environment';
@@ -41,7 +41,7 @@ import { AddTaskComponent } from './task-data/add-task/add-task.component';
 import { AddTaskMessageComponent } from './task-data/add-task-message/add-task-message.component';
 import { TaskBoardComponent } from './dashboard-data/task-board/task-board.component';
 import { TaskDetailsComponent } from './task-data/task-details/task-details.component';
-import { DialogEditTaskComponent } from './dialog-edit-task/dialog-edit-task.component';
+import { DialogEditTaskComponent } from './task-data/dialog-edit-task/dialog-edit-task.component';
 
 
 @NgModule({
@@ -85,6 +85,7 @@ import { DialogEditTaskComponent } from './dialog-edit-task/dialog-edit-task.com
     ClipboardModule,
     MatSnackBarModule,
     MatRadioModule,
+    ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),

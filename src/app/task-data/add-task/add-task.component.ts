@@ -4,6 +4,7 @@ import { Task } from 'src/models/task.class';
 import { addDoc, collection, Firestore } from '@angular/fire/firestore';
 import { AddTaskMessageComponent } from '../add-task-message/add-task-message.component';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-task',
@@ -13,13 +14,19 @@ import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition
 export class AddTaskComponent implements OnInit {
   task = new Task();
   loading: boolean = false;
+  dateSign: boolean = false;
   deadlineDate: Date;
   startDate: Date;
   value: any;
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
 
-  
+  title = new FormControl('', [Validators.required, Validators.minLength(1)]);
+  description = new FormControl('', [Validators.required, Validators.minLength(1)]);
+  datepicker = new FormControl('', [Validators.required]);
+  department = new FormControl('', [Validators.required]);
+
+
   constructor(private firestore: Firestore, private taskMessage: MatSnackBar) { }
 
   ngOnInit(): void { }
@@ -35,10 +42,20 @@ export class AddTaskComponent implements OnInit {
   }
 
 
-  async saveTask() {
+  checkAndSave() {
     this.task.startDate = this.startDate.getTime();
-    this.task.deadlineDate = this.deadlineDate.getTime();
+    if (this.deadlineDate >= this.startDate) {
+      this.task.deadlineDate = this.deadlineDate.getTime();
+      this.saveTask();
+    } else {
+      this.dateSign = true;
+    }
+  }
+
+
+  async saveTask() {
     this.loading = true;
+    this.dateSign = false;
     this.showTaskMessage();
     this.addDataToDB();
 

@@ -1,19 +1,20 @@
 <div class="dialog-container">
-    <mat-progress-bar class="progress-bar-add-box" mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+    <mat-progress-bar class="progress-bar" mode="indeterminate" *ngIf="loading"></mat-progress-bar>
 
-    <h1 mat-dialog-title>Add Task</h1>
+    <h1 mat-dialog-title>Edit Task</h1>
     <div mat-dialog-content class="form-flex">
         <div class="left-form">
 
             <div class="form-box">
                 <mat-form-field class="name-form-field" appearance="outline">
                     <mat-label>Title</mat-label>
-                    <input [disabled]="loading" [(ngModel)]="task.title" matInput>
+                    <input [(ngModel)]="task.title" matInput [formControl]="title" required autocomplete="off">
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" class="name-form-field">
                     <mat-label>Description</mat-label>
-                    <textarea [disabled]="loading" [(ngModel)]="task.description" matInput></textarea>
+                    <textarea [(ngModel)]="task.description" matInput [formControl]="description" required
+                        autocomplete="off"></textarea>
                 </mat-form-field>
             </div>
         </div>
@@ -38,14 +39,16 @@
             <div class="d-flex date-container">
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>{{ task.startDate | date: "dd/MM/yyyy" }}</mat-label>
-                    <input [disabled]="loading" [(ngModel)]="updateStartDate" matInput [matDatepicker]="picker1">
+                    <input [disabled]="loading" [(ngModel)]="updateStartDate" matInput [matDatepicker]="picker1"
+                        autocomplete="off">
                     <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
                     <mat-datepicker #picker1></mat-datepicker>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>{{ task.deadlineDate | date: "dd/MM/yyyy" }}</mat-label>
-                    <input [disabled]="loading" [(ngModel)]="updateDeadlineDate" matInput [matDatepicker]="picker2">
+                    <input [disabled]="loading" [(ngModel)]="updateDeadlineDate" matInput [matDatepicker]="picker2"
+                        autocomplete="off">
                     <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                     <mat-datepicker #picker2></mat-datepicker>
                 </mat-form-field>
@@ -54,7 +57,7 @@
             <div>
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Type</mat-label>
-                    <input [disabled]="loading" [(ngModel)]="task.type" matInput>
+                    <input [disabled]="loading" [(ngModel)]="task.type" matInput autocomplete="off">
                 </mat-form-field>
             </div>
 
@@ -62,8 +65,8 @@
                 <div class="full-width">
                     <mat-form-field appearance="outline" class="dep-width">
                         <mat-label>Department</mat-label>
-                        <mat-select class="example-radio-group" [(ngModel)]="task.department"
-                            (change)="selectionChange(value)" appearance="outline" class="full-width">
+                        <mat-select class="example-radio-group" [(ngModel)]="task.department" [formControl]="department"
+                            required (change)="selectionChange(value)" appearance="outline" class="full-width">
                             <mat-option color="primary" class="example-radio-button" value="Front-End"> Front-End
                             </mat-option>
                             <mat-option color="primary" class="example-radio-button" value="Back-End"> Back-End

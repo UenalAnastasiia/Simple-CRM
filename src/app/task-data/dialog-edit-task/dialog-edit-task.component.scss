@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .form-flex {
@@ -73,4 +74,12 @@ mat-card {
 
 .dep-width {
     width: 214px;
+}
+
+.progress-bar {
+    position: absolute;
+    left: -24px;
+    right: -24px;
+    top: -24px;
+    width: calc(100% + 48px);
 }

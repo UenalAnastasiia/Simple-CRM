@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { doc, Firestore } from '@angular/fire/firestore';
+import { FormControl, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatRadioChange } from '@angular/material/radio';
 import { setDoc } from '@firebase/firestore';
@@ -13,11 +14,18 @@ import { Task } from 'src/models/task.class';
 export class DialogEditTaskComponent implements OnInit {
   task: Task;
   loading: boolean = false;
+  dateSign: boolean = false;
   value: any;
   currentStarthDate: any;
   currentDeadlineDate: any;
   updateDeadlineDate: any;
   updateStartDate: any;
+
+  title = new FormControl('', [Validators.required, Validators.minLength(1)]);
+  description = new FormControl('', [Validators.required, Validators.minLength(1)]);
+  datepicker = new FormControl('', [Validators.required]);
+  department = new FormControl('', [Validators.required]);
+
 
   constructor(public dialogRef: MatDialogRef<DialogEditTaskComponent>, private firestore: Firestore) { }
 
@@ -31,6 +39,17 @@ export class DialogEditTaskComponent implements OnInit {
 
   selectionChange(value: any) {
     this.task.department = value;
+  }
+
+
+  checkAndSave() {
+    this.task.startDate = this.updateStartDate.getTime();
+    if (this.updateDeadlineDate >= this.updateStartDate) {
+      this.task.deadlineDate = this.updateDeadlineDate.getTime();
+      this.saveTask();
+    } else {
+      this.dateSign = true;
+    }
   }
 
 

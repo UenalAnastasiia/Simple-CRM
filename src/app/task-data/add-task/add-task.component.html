@@ -7,13 +7,15 @@
             <div class="left-form">
                 <div class="form-box">
                     <mat-form-field class="name-form-field" appearance="outline">
-                        <mat-label>Title</mat-label>
-                        <input [disabled]="loading" [(ngModel)]="task.title" matInput>
+                        <mat-label for="title">Title</mat-label>
+                        <input [(ngModel)]="task.title" matInput [formControl]="title" required
+                            autocomplete="off">
                     </mat-form-field>
 
                     <mat-form-field appearance="outline" class="name-form-field">
-                        <mat-label>Description</mat-label>
-                        <textarea [disabled]="loading" [(ngModel)]="task.description" matInput></textarea>
+                        <mat-label for="description">Description</mat-label>
+                        <textarea [(ngModel)]="task.description" matInput
+                            [formControl]="description" required autocomplete="off"></textarea>
                     </mat-form-field>
                 </div>
             </div>
@@ -21,7 +23,7 @@
             <div class="right-form">
                 <div>
                     <mat-form-field appearance="outline" class="full-width">
-                        <mat-label>Priority</mat-label>
+                        <mat-label for="priority">Priority</mat-label>
                         <input [(ngModel)]="task.priority" matInput class="hidden">
                         <mat-radio-group class="example-radio-group" [(ngModel)]="task.priority"
                             (change)="onChange($event)" appearance="outline" class="full-width">
@@ -35,36 +37,41 @@
                     </mat-form-field>
                 </div>
 
-                <div class="d-flex date-container">
+                <div class="date-container">
                     <mat-form-field appearance="outline" class="full-width">
-                        <mat-label>Start Date</mat-label>
-                        <input [disabled]="loading" [(ngModel)]="startDate" matInput [matDatepicker]="picker1">
+                        <mat-label for="startDate">Start Date</mat-label>
+                        <input [(ngModel)]="startDate" matInput [matDatepicker]="picker1"
+                            [formControl]="datepicker" required autocomplete="off">
                         <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
                         <mat-datepicker #picker1></mat-datepicker>
                     </mat-form-field>
 
                     <mat-form-field appearance="outline" class="full-width">
-                        <mat-label>Deadline Date</mat-label>
-                        <input [disabled]="loading" [(ngModel)]="deadlineDate" matInput [matDatepicker]="picker2">
+                        <mat-label for="deadlineDate">Deadline Date</mat-label>
+                        <input [(ngModel)]="deadlineDate" matInput [matDatepicker]="picker2"
+                            [formControl]="datepicker" required autocomplete="off">
                         <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                         <mat-datepicker #picker2></mat-datepicker>
+                        <mat-hint *ngIf="dateSign">Choose a Date after Start Date</mat-hint>
                     </mat-form-field>
                 </div>
 
                 <div>
                     <mat-form-field appearance="outline" class="full-width">
-                        <mat-label>Type</mat-label>
-                        <input [disabled]="loading" [(ngModel)]="task.type" matInput>
+                        <mat-label for="type">Type</mat-label>
+                        <input [(ngModel)]="task.type" matInput autocomplete="off">
                     </mat-form-field>
                 </div>
 
-                <div class="department-user">
+                <div class="date-container">
                     <div class="full-width">
-                        <mat-form-field appearance="outline" class="dep-width margin-right-8">
-                            <mat-label>Department</mat-label>
+                        <mat-form-field appearance="outline" class="margin-right-30">
+                            <mat-label for="department">Department</mat-label>
                             <mat-select class="example-radio-group" [(ngModel)]="task.department"
-                                (change)="selectionChange(value)" appearance="outline" class="full-width">
-                                <mat-option color="primary" class="example-radio-button" value="Front-End"> Front-End
+                                [formControl]="department" required (change)="selectionChange(value)"
+                                appearance="outline" class="full-width">
+                                <mat-option color="primary" class="example-radio-button" value="Front-End">
+                                    Front-End
                                 </mat-option>
                                 <mat-option color="primary" class="example-radio-button" value="Back-End"> Back-End
                                 </mat-option>
@@ -72,7 +79,8 @@
                                 </mat-option>
                                 <mat-option color="primary" class="example-radio-button" value="Finance"> Finance
                                 </mat-option>
-                                <mat-option color="primary" class="example-radio-button" value="Marketing"> Marketing
+                                <mat-option color="primary" class="example-radio-button" value="Marketing">
+                                    Marketing
                                 </mat-option>
                             </mat-select>
                         </mat-form-field>
@@ -80,8 +88,8 @@
 
                     <div class="full-width add-user-box">
                         <mat-form-field class="name-form-field dep-width" appearance="outline">
-                            <mat-label>Add Employee</mat-label>
-                            <input [disabled]="loading" [(ngModel)]="task.employee" matInput>
+                            <mat-label for="employee">Add Employee</mat-label>
+                            <input [(ngModel)]="task.employee" matInput autocomplete="off">
                         </mat-form-field>
                     </div>
                 </div>
@@ -89,7 +97,7 @@
         </div>
 
         <div mat-dialog-actions class="d-flex">
-            <button [disabled]="loading" type="submit" mat-button cdkFocusInitial (click)="saveTask()">Save</button>
+            <button [disabled]="loading || !title.valid || !description.valid || !datepicker.valid || !department.valid" (click)="checkAndSave()" mat-button cdkFocusInitial>Save</button>
         </div>
     </mat-card>
 </div>

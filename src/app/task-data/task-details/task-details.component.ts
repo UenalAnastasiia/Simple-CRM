@@ -3,7 +3,7 @@ import { collection, collectionData, doc, Firestore, getDoc } from '@angular/fir
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { DialogEditTaskComponent } from 'src/app/dialog-edit-task/dialog-edit-task.component';
+import { DialogEditTaskComponent } from 'src/app/task-data/dialog-edit-task/dialog-edit-task.component';
 import { Task } from 'src/models/task.class';
 
 @Component({
@@ -15,7 +15,6 @@ export class TaskDetailsComponent implements OnInit {
   task: Task = new Task();
   taskID: any;
   taskData: any;
-  loading: boolean = false;
   updateStartDate: any;
   editable: boolean = false;  
   // currentStartDate: any;
