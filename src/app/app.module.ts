@@ -34,14 +34,18 @@ import { TimeBoardComponent } from './dashboard-data/time-board/time-board.compo
 import { MatBadgeModule } from '@angular/material/badge';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { CopyMessageComponent } from './user-data/copy-message/copy-message.component';
+import { CopyMessageComponent } from './messages-bar/copy-message/copy-message.component';
 import { MatRadioModule } from '@angular/material/radio';
 import { DialogEditPersonalInfoComponent } from './user-data/dialog-edit-personal-info/dialog-edit-personal-info.component';
-import { AddTaskComponent } from './task-data/add-task/add-task.component';
-import { AddTaskMessageComponent } from './task-data/add-task-message/add-task-message.component';
+import { DialogAddTaskComponent } from './task-data/dialog-add-task/dialog-add-task.component';
+import { AddTaskMessageComponent } from './messages-bar/add-task-message/add-task-message.component';
 import { TaskBoardComponent } from './dashboard-data/task-board/task-board.component';
 import { TaskDetailsComponent } from './task-data/task-details/task-details.component';
 import { DialogEditTaskComponent } from './task-data/dialog-edit-task/dialog-edit-task.component';
+import { DialogDeleteUserComponent } from './user-data/dialog-delete-user/dialog-delete-user.component';
+import { DeleteUserMessageComponent } from './messages-bar/delete-user-message/delete-user-message.component';
+import { DialogDeleteTaskComponent } from './task-data/dialog-delete-task/dialog-delete-task.component';
+import { DeleteTaskMessageComponent } from './messages-bar/delete-task-message/delete-task-message.component';
 
 
 @NgModule({
@@ -56,11 +60,15 @@ import { DialogEditTaskComponent } from './task-data/dialog-edit-task/dialog-edi
     TimeBoardComponent,
     CopyMessageComponent,
     DialogEditPersonalInfoComponent,
-    AddTaskComponent,
+    DialogAddTaskComponent,
     AddTaskMessageComponent,
     TaskBoardComponent,
     TaskDetailsComponent,
-    DialogEditTaskComponent
+    DialogEditTaskComponent,
+    DialogDeleteUserComponent,
+    DeleteUserMessageComponent,
+    DialogDeleteTaskComponent,
+    DeleteTaskMessageComponent
   ],
   imports: [
     BrowserModule,

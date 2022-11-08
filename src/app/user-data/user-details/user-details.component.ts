@@ -7,8 +7,9 @@ import { User } from 'src/models/user.class';
 import { DialogEditAddressComponent } from '../dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from '../dialog-edit-user/dialog-edit-user.component';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
-import { CopyMessageComponent } from '../copy-message/copy-message.component';
+import { CopyMessageComponent } from '../../messages-bar/copy-message/copy-message.component';
 import { DialogEditPersonalInfoComponent } from '../dialog-edit-personal-info/dialog-edit-personal-info.component';
+import { DialogDeleteUserComponent } from 'src/app/user-data/dialog-delete-user/dialog-delete-user.component';
 
 @Component({
   selector: 'app-user-details',
@@ -47,21 +48,18 @@ export class UserDetailsComponent implements OnInit {
   editUserName() {
     const dialog = this.dialog.open(DialogEditUserComponent);
     dialog.componentInstance.user = new User(this.user.toJSON());
-    dialog.componentInstance.user.id = this.userID;
   }
 
 
   editAddress() {
     const dialog = this.dialog.open(DialogEditAddressComponent);
     dialog.componentInstance.user = new User(this.user.toJSON());
-    dialog.componentInstance.user.id = this.userID;
   }
 
 
   editPersonal() {
     const dialog = this.dialog.open(DialogEditPersonalInfoComponent);
     dialog.componentInstance.user = new User(this.user.toJSON());
-    dialog.componentInstance.user.id = this.userID;
     dialog.componentInstance.currentBirthDate = this.user.birthDate;
   }
 
@@ -78,5 +76,11 @@ export class UserDetailsComponent implements OnInit {
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition
     });
+  }
+
+
+  openDeleteValidation() {
+    const dialog = this.dialog.open(DialogDeleteUserComponent);
+    dialog.componentInstance.user = new User(this.user.toJSON());
   }
 }

@@ -2,16 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { MatRadioChange } from '@angular/material/radio';
 import { Task } from 'src/models/task.class';
 import { addDoc, collection, Firestore } from '@angular/fire/firestore';
-import { AddTaskMessageComponent } from '../add-task-message/add-task-message.component';
+import { AddTaskMessageComponent } from '../../messages-bar/add-task-message/add-task-message.component';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 import { FormControl, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-add-task',
-  templateUrl: './add-task.component.html',
-  styleUrls: ['./add-task.component.scss']
+  selector: 'app-dialog-add-task',
+  templateUrl: './dialog-add-task.component.html',
+  styleUrls: ['./dialog-add-task.component.scss']
 })
-export class AddTaskComponent implements OnInit {
+export class DialogAddTaskComponent implements OnInit {
   task = new Task();
   loading: boolean = false;
   dateSign: boolean = false;

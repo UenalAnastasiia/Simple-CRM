@@ -3,6 +3,7 @@ import { collection, collectionData, doc, Firestore, getDoc } from '@angular/fir
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { DialogDeleteTaskComponent } from 'src/app/task-data/dialog-delete-task/dialog-delete-task.component';
 import { DialogEditTaskComponent } from 'src/app/task-data/dialog-edit-task/dialog-edit-task.component';
 import { Task } from 'src/models/task.class';
 
@@ -17,13 +18,6 @@ export class TaskDetailsComponent implements OnInit {
   taskData: any;
   updateStartDate: any;
   editable: boolean = false;  
-  // currentStartDate: any;
-  // updateDeadlineDate: any;
-  // currentDeadlineDate: any;
-  // value: any;
-  // horizontalPosition: MatSnackBarHorizontalPosition = 'center';
-  // verticalPosition: MatSnackBarVerticalPosition = 'top';
-
 
   constructor(private route: ActivatedRoute, private firestore: Firestore, public dialog: MatDialog) { }
 
@@ -45,6 +39,7 @@ export class TaskDetailsComponent implements OnInit {
     this.task.id = this.taskID;
   }
 
+
   editTask() {
     const dialog = this.dialog.open(DialogEditTaskComponent);
     dialog.componentInstance.task = new Task(this.task.toJSON());
@@ -54,42 +49,9 @@ export class TaskDetailsComponent implements OnInit {
   }
 
 
-  // onChange(event: MatRadioChange) {
-  //   this.task.priority = event.value;
-  // }
-
-
-  // selectionChange(value: any) {
-  //   this.task.department = value;
-  // }
-
-
-  // async saveTask() {
-  //   this.checkStartDate();
-  //   this.checkDeadlineDate();
-  //   await setDoc(doc(this.firestore, "tasks", this.task.id), this.task.toJSON());
-  //   this.loading = true;
-  //   setTimeout(() => {
-  //     this.loading = false;
-  //   }, 1500);
-  // }
-
-
-  // checkStartDate() {
-  //   if (!this.updateStartDate) {
-  //     this.task.startDate = this.currentStartDate;
-  //   } else {
-  //     this.task.startDate = this.updateStartDate.getTime();
-  //   }
-  // }
-
-
-  // checkDeadlineDate() {
-  //   if (!this.updateDeadlineDate) {
-  //     this.task.deadlineDate = this.currentDeadlineDate;
-  //   } else {
-  //     this.task.deadlineDate = this.updateDeadlineDate.getTime();
-  //   }
-  // }
+  openDeleteValidation() {
+    const dialog = this.dialog.open(DialogDeleteTaskComponent);
+    dialog.componentInstance.task = new Task(this.task.toJSON());
+  }
 
 }

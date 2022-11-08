@@ -83,7 +83,7 @@
         </div>
 
         <div mat-dialog-actions class="btn-box">
-            <button type="submit" mat-button cdkFocusInitial>Delete Task</button>
+            <button type="submit" mat-button cdkFocusInitial (click)="openDeleteValidation()">Delete Task</button>
             <button type="submit" mat-button cdkFocusInitial (click)="editTask()">Edit
                 Task</button>
         </div>

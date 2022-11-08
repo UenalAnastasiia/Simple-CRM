@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/models/user.class';
 import { MatDialogRef } from '@angular/material/dialog';
-import { Firestore } from '@angular/fire/firestore';
+import { doc, Firestore, setDoc } from '@angular/fire/firestore';
 import { collection, addDoc } from "firebase/firestore";
 import { countries } from 'src/assets/store/country-data-store';
 import { MatRadioChange } from '@angular/material/radio';
@@ -52,8 +52,8 @@ export class DialogAddUserComponent implements OnInit {
 
 
   async addDataToDB() {
-    const userCollection = collection(this.firestore, 'users');
-    await addDoc(userCollection, this.user.toJSON());
-    this.user.id = userCollection.id;
+    const docRef = await addDoc(collection(this.firestore, "users"), this.user.toJSON())
+    this.user.id = docRef.id;
+    await setDoc(doc(this.firestore, "users", this.user.id), this.user.toJSON());
   }
 }

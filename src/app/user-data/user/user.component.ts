@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Firestore, collectionData } from '@angular/fire/firestore';
 import { MatDialog } from '@angular/material/dialog';
-import { ActivatedRoute } from '@angular/router';
 import { collection } from '@firebase/firestore';
 import { Observable } from 'rxjs';
 import { User } from 'src/models/user.class';
@@ -27,7 +26,6 @@ export class UserComponent implements OnInit {
     this.allUsers$ = collectionData(userCollection, { idField: "userID" });
 
     this.allUsers$.subscribe((loadData: any) => {
-      // console.log('Received changes:', loadData);
       this.allUsers = loadData;
     });
   }

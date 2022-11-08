@@ -21,7 +21,7 @@
         <div>
             <mat-form-field appearance="outline" class="full-width">
                 <mat-label>{{ user.birthDate | date: "dd/MM/yyyy" }}</mat-label>
-                <input [(ngModel)]="updateBirthDate" matInput [matDatepicker]="picker1" [formControl]="datepicker" required autocomplete="off">
+                <input [(ngModel)]="updateBirthDate" matInput [matDatepicker]="picker1" autocomplete="off">
                 <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
                 <mat-datepicker #picker1></mat-datepicker>
             </mat-form-field>
@@ -32,5 +32,5 @@
 
 <div mat-dialog-actions>
     <button mat-button (click)="dialogRef.close()">Cancel</button>
-    <button [disabled]="loading || !datepicker.valid" mat-button cdkFocusInitial (click)="saveUser()">Save</button>
+    <button [disabled]="loading" mat-button cdkFocusInitial (click)="saveUser()">Save</button>
 </div>

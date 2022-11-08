@@ -67,3 +67,9 @@
         <span> <b> Birth Date: </b> {{ user.birthDate | date: "dd/MM/yyyy" }}</span>
     </mat-card-content>
 </mat-card>
+
+<div class="delete-btn-box">
+    <button mat-fab color="primary" matTooltipClass="example-tooltip-red" matTooltip="Delete user">
+        <mat-icon (click)="openDeleteValidation()">delete</mat-icon>
+    </button>
+</div>

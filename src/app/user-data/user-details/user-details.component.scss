@@ -42,3 +42,19 @@
         opacity: 0.8;
     }
 }
+
+.delete-btn-box {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+
+    button:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+
+.example-tooltip-red {
+    background: #b71c1c;
+}

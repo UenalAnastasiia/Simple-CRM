@@ -4,9 +4,10 @@
             <th>Name</th>
             <th>E-Mail</th>
             <th>Country</th>
+
         </tr>
 
-        <tr *ngFor="let user of allUsers" [routerLink]="['/user/' + user.userID]" matTooltipClass="example-tooltip-red" matTooltip="Read more">
+        <tr *ngFor="let user of allUsers" [routerLink]="['/user/' + user.userID]">
             <td>{{ user.firstName }} {{ user.lastName }}</td>
             <td>{{ user.email }}</td>
             <td>{{ user.country }}</td>
