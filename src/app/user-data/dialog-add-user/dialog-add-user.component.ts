@@ -56,12 +56,4 @@ export class DialogAddUserComponent implements OnInit {
     await addDoc(userCollection, this.user.toJSON());
     this.user.id = userCollection.id;
   }
-  
-
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
-    return this.email.hasError('email') ? 'Not a valid email' : '';
-  }
 }

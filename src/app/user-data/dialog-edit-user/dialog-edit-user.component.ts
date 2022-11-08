@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { doc, Firestore, setDoc } from '@angular/fire/firestore';
+import { FormControl, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatRadioChange } from '@angular/material/radio';
 import { User } from 'src/models/user.class';
@@ -13,6 +14,10 @@ export class DialogEditUserComponent implements OnInit {
   
   user: User;
   loading: boolean = false;
+
+  firstName = new FormControl('', [Validators.required, Validators.minLength(1)]);
+  lastName = new FormControl('', [Validators.required, Validators.minLength(1)]);
+  email = new FormControl('', [Validators.required, Validators.email]);
 
   constructor(public dialogRef: MatDialogRef<DialogEditUserComponent>, private firestore: Firestore) { }
 

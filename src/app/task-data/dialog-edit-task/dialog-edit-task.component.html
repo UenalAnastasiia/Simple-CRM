@@ -51,6 +51,7 @@
                         autocomplete="off">
                     <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                     <mat-datepicker #picker2></mat-datepicker>
+                    <mat-hint *ngIf="dateSign">Choose a Date after Start Date</mat-hint>
                 </mat-form-field>
             </div>
 

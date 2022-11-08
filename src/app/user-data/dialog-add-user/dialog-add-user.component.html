@@ -6,12 +6,12 @@
         <div class="form-box">
             <mat-form-field class="name-form-field" appearance="outline">
                 <mat-label>First Name</mat-label>
-                <input matInput [formControl]="firstName" required [(ngModel)]="user.firstName">
+                <input matInput [formControl]="firstName" required [(ngModel)]="user.firstName" required autocomplete="off">
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="name-form-field">
                 <mat-label>Last Name</mat-label>
-                <input [(ngModel)]="user.lastName" matInput [formControl]="lastName" required>
+                <input [(ngModel)]="user.lastName" matInput [formControl]="lastName" required autocomplete="off">
             </mat-form-field>
         </div>
 
@@ -20,7 +20,7 @@
                 <mat-label>Gender</mat-label>
                 <input [(ngModel)]="user.gender" matInput class="hidden">
                 <mat-radio-group class="example-radio-group" [(ngModel)]="user.gender" (change)="onChange($event)"
-                    appearance="outline" class="full-width">
+                    appearance="outline" class="full-width" autocomplete="off">
                     <mat-radio-button color="primary" class="example-radio-button" value="Male"> Male
                     </mat-radio-button>
                     <mat-radio-button color="primary" class="example-radio-button" value="Female"> Female
@@ -34,14 +34,14 @@
         <div>
             <mat-form-field appearance="outline" class="full-width">
                 <mat-label>E-Mail</mat-label>
-                <input [(ngModel)]="user.email" matInput [formControl]="email" required>
+                <input [(ngModel)]="user.email" matInput [formControl]="email" required autocomplete="off">
             </mat-form-field>
         </div>
 
         <div>
             <mat-form-field appearance="outline" class="full-width">
                 <mat-label>Birth Date</mat-label>
-                <input [(ngModel)]="birthDate" matInput [matDatepicker]="picker1" [formControl]="datepicker" required>
+                <input [(ngModel)]="birthDate" matInput [matDatepicker]="picker1" [formControl]="datepicker" required autocomplete="off">
                 <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
                 <mat-datepicker #picker1></mat-datepicker>
             </mat-form-field>
@@ -50,19 +50,19 @@
         <div>
             <mat-form-field appearance="outline" class="full-width">
                 <mat-label>Street + House No.</mat-label>
-                <input [(ngModel)]="user.street" matInput>
+                <input [(ngModel)]="user.street" matInput autocomplete="off">
             </mat-form-field>
         </div>
 
         <div class="form-box">
             <mat-form-field appearance="outline" class="address-form-field">
                 <mat-label>Zip Code</mat-label>
-                <input [(ngModel)]="user.zipCode" matInput>
+                <input [(ngModel)]="user.zipCode" matInput autocomplete="off">
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="address-form-field">
                 <mat-label>City</mat-label>
-                <input [(ngModel)]="user.city" matInput>
+                <input [(ngModel)]="user.city" matInput autocomplete="off">
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="address-form-field">

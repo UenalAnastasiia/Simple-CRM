@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { doc, Firestore, setDoc } from '@angular/fire/firestore';
+import { FormControl, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatRadioChange } from '@angular/material/radio';
 import { User } from 'src/models/user.class';
@@ -14,6 +15,7 @@ export class DialogEditPersonalInfoComponent implements OnInit {
   loading: boolean = false;
   updateBirthDate: any;
   currentBirthDate: any;
+  datepicker = new FormControl('', [Validators.required]);
 
   
   constructor(public dialogRef: MatDialogRef<DialogEditPersonalInfoComponent>, private firestore: Firestore) { }

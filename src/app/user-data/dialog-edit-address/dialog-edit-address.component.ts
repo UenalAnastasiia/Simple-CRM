@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { doc, Firestore, setDoc } from '@angular/fire/firestore';
+import { FormControl, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { countries } from 'src/assets/store/country-data-store';
 import { User } from 'src/models/user.class';
@@ -14,6 +15,7 @@ export class DialogEditAddressComponent implements OnInit {
   user: User;
   loading: boolean = false;
   countries: any = countries;
+  country = new FormControl('', [Validators.required]);
 
   constructor(public dialogRef: MatDialogRef<DialogEditAddressComponent>, private firestore: Firestore) { }
 

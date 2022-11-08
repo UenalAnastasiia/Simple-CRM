@@ -5,35 +5,19 @@
         <div>
             <mat-form-field class="margin-right-16" appearance="outline">
                 <mat-label>First Name</mat-label>
-                <input [disabled]="loading" [(ngModel)]="user.firstName" matInput>
+                <input [(ngModel)]="user.firstName" matInput [formControl]="firstName" autocomplete="off">
             </mat-form-field>
 
             <mat-form-field appearance="outline">
                 <mat-label>Last Name</mat-label>
-                <input [disabled]="loading" [(ngModel)]="user.lastName" matInput>
+                <input [(ngModel)]="user.lastName" matInput [formControl]="lastName" autocomplete="off">
             </mat-form-field>
         </div>
 
         <div>
             <mat-form-field appearance="outline" class="full-width">
                 <mat-label>E-Mail</mat-label>
-                <input [disabled]="loading" [(ngModel)]="user.email" matInput>
-            </mat-form-field>
-        </div>
-
-        <div>
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Gender</mat-label>
-                <input [(ngModel)]="user.gender" matInput class="hidden">
-                <mat-radio-group class="example-radio-group" [(ngModel)]="user.gender" (change)="onChange($event)"
-                    appearance="outline" class="full-width">
-                    <mat-radio-button color="primary" class="example-radio-button" value="Male"> Male
-                    </mat-radio-button>
-                    <mat-radio-button color="primary" class="example-radio-button" value="Female"> Female
-                    </mat-radio-button>
-                    <mat-radio-button color="primary" class="example-radio-button" value="Diverse"> Diverse
-                    </mat-radio-button>
-                </mat-radio-group>
+                <input [(ngModel)]="user.email" matInput [formControl]="email" required autocomplete="off">
             </mat-form-field>
         </div>
     </div>
@@ -41,5 +25,5 @@
 
 <div mat-dialog-actions>
     <button [disabled]="loading" mat-button (click)="dialogRef.close()">Cancel</button>
-    <button [disabled]="loading" mat-button cdkFocusInitial (click)="saveUser()">Save</button>
+    <button [disabled]="loading || !firstName.valid || !lastName.valid || !email.valid" mat-button cdkFocusInitial (click)="saveUser()">Save</button>
 </div>

@@ -25,7 +25,6 @@ export class TaskBoardComponent implements OnInit {
     this.allTasks$ = collectionData(taskCollection, { idField: "taskID" });
 
     this.allTasks$.subscribe((loadData: any) => {
-      console.log('Received changes:', loadData);
       this.allTasks = loadData;
     });
   }
