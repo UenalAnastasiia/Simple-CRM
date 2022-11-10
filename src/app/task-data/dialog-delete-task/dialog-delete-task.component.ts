@@ -30,7 +30,7 @@ export class DialogDeleteTaskComponent implements OnInit {
 
     setTimeout(() => {
       this.loading = false;
-      window.location.href = '';
+      window.location.href = '/dashboard';
       this.showDeleteMessage();
     }, 1500);
   }

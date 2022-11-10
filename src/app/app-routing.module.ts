@@ -5,9 +5,10 @@ import { DashboardComponent } from './dashboard-data/dashboard/dashboard.compone
 import { UserDetailsComponent } from './user-data/user-details/user-details.component';
 import { UserComponent } from './user-data/user/user.component';
 import { TaskDetailsComponent } from './task-data/task-details/task-details.component';
+import { StartscreenComponent } from './homepage/startscreen/startscreen.component';
 
 const routes: Routes = [ 
-  { path: '', component: DashboardComponent },
+  { path: '', component: StartscreenComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'user', component: UserComponent },
   { path: 'user/:id', component: UserDetailsComponent },

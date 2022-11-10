@@ -12,6 +12,7 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./dialog-add-task.component.scss']
 })
 export class DialogAddTaskComponent implements OnInit {
+
   task = new Task();
   loading: boolean = false;
   dateSign: boolean = false;
