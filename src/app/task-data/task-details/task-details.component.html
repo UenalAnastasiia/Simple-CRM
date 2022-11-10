@@ -52,9 +52,9 @@
                     </mat-form-field>
                 </div>
 
-                <div class="department-user">
+                <div class="date-container">
                     <div class="full-width">
-                        <mat-form-field appearance="outline" class="dep-width">
+                        <mat-form-field appearance="outline" class="margin-right-30">
                             <mat-label>Department</mat-label>
                             <mat-select class="example-radio-group" [(ngModel)]="task.department" appearance="outline"
                                 class="full-width" [disabled]="!editable">
@@ -72,7 +72,7 @@
                         </mat-form-field>
                     </div>
 
-                    <div>
+                    <div class="full-width">
                         <mat-form-field class="name-form-field dep-width" appearance="outline">
                             <mat-label>Employee</mat-label>
                             <input [(ngModel)]="task.employee" matInput readonly>

@@ -33,15 +33,23 @@ mat-card {
     }
 }
 
-.date-container mat-form-field {
-    &:first-child {
-        margin-right: 4px;
-        width: 220px;
+.date-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    mat-form-field {
+        &:first-child {
+            width: 14vw;
+        }
+    
+        &:last-child {
+            width: 14vw;
+        }
     }
 
-    &:last-child {
-        margin-left: 4px;
-        width: 220px;
+    mat-hint {
+        color: red;
     }
 }
 
@@ -61,19 +69,6 @@ mat-card {
     &:last-child {
         margin-right: 0;
     }
-}
-
-.department-user {
-    display: flex;
-    width: 100%;
-}
-
-.department-box {
-    width: 100%;
-}
-
-.dep-width {
-    width: 214px;
 }
 
 .progress-bar {

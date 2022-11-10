@@ -35,7 +35,6 @@ export class TaskDetailsComponent implements OnInit {
     const snapDoc = await getDoc(docRef);
     this.taskData = snapDoc.data();
     this.task = new Task(this.taskData);
-    console.log('Show ', this.task)
     this.task.id = this.taskID;
   }
 
