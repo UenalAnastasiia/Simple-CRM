@@ -7,8 +7,12 @@
 
 .info-box {
     position: absolute;
-    top: 45vh;
+    top: 40vh;
     width: calc(100vw - 15px);
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .card-descriptions {
@@ -39,7 +43,7 @@ mat-card {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 65px;
 
     button {
         font-size: 46px;

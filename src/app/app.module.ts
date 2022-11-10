@@ -51,6 +51,7 @@ import { StartscreenComponent } from './homepage/startscreen/startscreen.compone
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './homepage/home/home.component';
 import { DescriptionComponent } from './homepage/description/description.component';
+import { FooterComponent } from './homepage/footer/footer.component';
 
 
 
@@ -78,7 +79,8 @@ import { DescriptionComponent } from './homepage/description/description.compone
     StartscreenComponent,
     NavbarComponent,
     HomeComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
