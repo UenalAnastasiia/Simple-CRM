@@ -4,3 +4,54 @@
     position: relative;
     margin-top: 56px;
 }
+
+.info-box {
+    position: absolute;
+    top: 45vh;
+    width: calc(100vw - 15px);
+}
+
+.card-descriptions {
+    display: flex;
+    justify-content: space-around;
+}
+
+mat-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #097eb442;
+    color: #097eb4;
+    text-align: center;
+    font-weight: 600;
+    max-width: 290px;
+    width: 290px;
+
+    span {
+        &:first-child {
+            font-size: 28px;
+        }
+    }
+}
+
+.btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+    button {
+        font-size: 46px;
+        padding: 12px;
+    }
+}
+
+.mat-success {
+    background-color: #673AB7;
+    color: #fff;
+
+    &:hover {
+        background-color: #b71c1c;
+    }
+}
