@@ -18,6 +18,7 @@ export class DialogEditUserComponent implements OnInit {
   firstName = new FormControl('', [Validators.required, Validators.minLength(1)]);
   lastName = new FormControl('', [Validators.required, Validators.minLength(1)]);
   email = new FormControl('', [Validators.required, Validators.email]);
+  telephone = new FormControl('', [Validators.required, Validators.pattern('[- +()0-9]+')]);
 
   constructor(public dialogRef: MatDialogRef<DialogEditUserComponent>, private firestore: Firestore) { }
 

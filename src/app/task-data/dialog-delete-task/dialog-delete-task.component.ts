@@ -38,7 +38,8 @@ export class DialogDeleteTaskComponent implements OnInit {
 
   showDeleteMessage() {
     this.deleteBar.openFromComponent(DeleteTaskMessageComponent, {
-      duration: 1000,
+      duration: 2500,
+      panelClass: ['white-snackbar'],
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition
     });

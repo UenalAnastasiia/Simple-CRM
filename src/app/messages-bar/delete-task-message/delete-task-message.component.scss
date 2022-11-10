@@ -1,8 +1,13 @@
+.deleteMessage, .mat-snack-bar-container {
+    background: white !important;
+}
+
 mat-icon {
     margin-left: 6px;
     color: rgb(14, 185, 114);
 }
 
 span {
-    color: white;
+    color: #b71c1c;
+    font-weight: 600;
 }

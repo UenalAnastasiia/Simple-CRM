@@ -1,6 +1,6 @@
 <div class="dialog-container">
     <mat-card>
-        <mat-progress-bar class="progress-bar-add-box" mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+        <mat-progress-bar class="progress-bar" mode="indeterminate" *ngIf="loading"></mat-progress-bar>
 
         <h1 mat-dialog-title>Add Task</h1>
         <div mat-dialog-content class="form-flex">
@@ -52,7 +52,7 @@
                             [formControl]="datepicker" required autocomplete="off">
                         <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                         <mat-datepicker #picker2></mat-datepicker>
-                        <mat-hint *ngIf="dateSign">Choose a Date after Start Date</mat-hint>
+                        <mat-hint *ngIf="dateSign">Invalid Deadline Date</mat-hint>
                     </mat-form-field>
                 </div>
 

@@ -40,6 +40,7 @@ export class DialogDeleteUserComponent implements OnInit {
   showDeleteMessage() {
     this.deleteBar.openFromComponent(DeleteUserMessageComponent, {
       duration: 1000,
+      panelClass: ['white-snackbar'],
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition
     });
