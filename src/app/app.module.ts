@@ -52,6 +52,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './homepage/home/home.component';
 import { DescriptionComponent } from './homepage/description/description.component';
 import { FooterComponent } from './homepage/footer/footer.component';
+import { LoginDialogComponent } from './login-dialog/login-dialog.component';
 
 
 
@@ -80,7 +81,8 @@ import { FooterComponent } from './homepage/footer/footer.component';
     NavbarComponent,
     HomeComponent,
     DescriptionComponent,
-    FooterComponent
+    FooterComponent,
+    LoginDialogComponent
   ],
   imports: [
     BrowserModule,
