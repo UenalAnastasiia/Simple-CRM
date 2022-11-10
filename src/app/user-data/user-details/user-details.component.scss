@@ -64,6 +64,10 @@
         cursor: pointer;
         opacity: 0.8;
     }
+
+    @media (min-height: 900px) {
+        margin-top: 36px;
+    }
 }
 
 .example-tooltip-red {

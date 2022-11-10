@@ -79,7 +79,7 @@
         </div>
     </div>
 
-    <div mat-dialog-actions>
+    <div mat-dialog-actions class="btn-box">
         <button mat-button (click)="dialogRef.close()">Cancel</button>
         <button [disabled]="loading || !firstName.valid || !lastName.valid || !email.valid || !datepicker.valid || !country.valid" mat-button (click)="saveUser()">Save</button>
     </div>

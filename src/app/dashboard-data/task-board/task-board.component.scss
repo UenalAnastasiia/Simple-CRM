@@ -1,11 +1,15 @@
 .task-container {
     background-image: url('/../assets/img/taskboard.jpg');
-    min-height: calc(50vh);
+    min-height: calc(50vh - 28px);
     margin-left: -56px;
     width: calc(100% + 112px);
     display: flex;
     align-items: center;
     flex-direction: column;
+
+    @media (max-height: 800px) {
+        min-height: calc(50vh - 64px);
+    }
 
     .task-header {
         margin-top: 20px;

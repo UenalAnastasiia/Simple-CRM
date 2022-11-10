@@ -73,6 +73,7 @@ export class UserDetailsComponent implements OnInit {
   showCopyBar() {
     this.copyBar.openFromComponent(CopyMessageComponent, {
       duration: 1000,
+      panelClass: ['white-snackbar'],
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition
     });
