@@ -4,10 +4,17 @@
             <th>Name</th>
             <th>E-Mail</th>
             <th>Country</th>
-
         </tr>
 
-        <tr *ngFor="let user of allUsers" [routerLink]="['/user/' + user.userID]">
+        <tr>
+            <input type="text" class="search-box" placeholder="Search..." [(ngModel)]="filterTerm" />
+        </tr>
+
+        <!-- <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm" />
+        </div> -->
+
+        <tr *ngFor="let user of allUsers | filter: filterTerm" [routerLink]="['/user/' + user.userID]">
             <td>{{ user.firstName }} {{ user.lastName }}</td>
             <td>{{ user.email }}</td>
             <td>{{ user.country }}</td>

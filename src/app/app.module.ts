@@ -46,6 +46,8 @@ import { DialogDeleteUserComponent } from './user-data/dialog-delete-user/dialog
 import { DeleteUserMessageComponent } from './messages-bar/delete-user-message/delete-user-message.component';
 import { DialogDeleteTaskComponent } from './task-data/dialog-delete-task/dialog-delete-task.component';
 import { DeleteTaskMessageComponent } from './messages-bar/delete-task-message/delete-task-message.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 
 @NgModule({
@@ -94,6 +96,7 @@ import { DeleteTaskMessageComponent } from './messages-bar/delete-task-message/d
     MatSnackBarModule,
     MatRadioModule,
     ReactiveFormsModule,
+    Ng2SearchPipeModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),

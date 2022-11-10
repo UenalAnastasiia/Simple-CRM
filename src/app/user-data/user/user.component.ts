@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { User } from 'src/models/user.class';
 import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
 
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -13,11 +14,12 @@ import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.compo
   encapsulation: ViewEncapsulation.None,
 })
 export class UserComponent implements OnInit {
-
   user = new User();
   allUsers$: Observable<any>;
   allUsers: any = [];
   userID: string;
+  filterTerm!: string;
+
 
   constructor(public dialog: MatDialog, private firestore: Firestore) { }
 

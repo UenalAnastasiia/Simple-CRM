@@ -68,6 +68,15 @@ table {
         text-align: start;
     }
 }
+.search-box {
+    width: 100%;
+    padding: 14px;
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
 
 *::-webkit-scrollbar {
     display: block;
