@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { DashboardComponent } from 'src/app/dashboard-data/dashboard/dashboard.component';
 import { LoginDialogComponent } from 'src/app/login-dialog/login-dialog.component';
 
 @Component({
@@ -18,4 +19,6 @@ export class DescriptionComponent implements OnInit {
   openLoginDialog() {
     this.dialog.open(LoginDialogComponent);
   }
+
+
 }

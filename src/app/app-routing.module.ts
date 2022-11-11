@@ -8,7 +8,9 @@ import { TaskDetailsComponent } from './task-data/task-details/task-details.comp
 import { StartscreenComponent } from './homepage/startscreen/startscreen.component';
 
 const routes: Routes = [ 
-  { path: '', component: StartscreenComponent },
+  // { path: '', component: StartscreenComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: StartscreenComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'user', component: UserComponent },
   { path: 'user/:id', component: UserDetailsComponent },
@@ -17,7 +19,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

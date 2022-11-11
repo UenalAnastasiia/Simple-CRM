@@ -1,1 +1,35 @@
-<app-startscreen></app-startscreen>
+<mat-drawer-container class="mat-draw-container" autosize>
+    <mat-drawer #drawer class="sidenav" [opened]="true" mode="side" [class.d-none]="homePage">
+        <div class="logo-container" routerLink="/home">
+            <img class="logo-img" src="assets/img/logo.png">
+        </div>
+
+        <ul class="menu-items">
+            <li routerLink="/dashboard">
+                <mat-icon>dashboard</mat-icon>
+                <span>Dashboard</span>
+            </li>
+            <li routerLink="/user">
+                <mat-icon matBadge="{{ userLength }}" matBadgeColor="primary">person</mat-icon>
+                <span>User</span>
+            </li>
+            <li routerLink="/task">
+                <mat-icon matBadge="{{ taskLength }}" matBadgeColor="primary">edit_document</mat-icon>
+                <span>Task</span>
+            </li>
+        </ul>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <mat-toolbar color="primary" [class.d-none]="homePage">
+            <mat-toolbar-row>
+                <mat-icon class="menu-icon" (click)="drawer.toggle()">menu</mat-icon>
+                <span>Simple CRM</span>
+            </mat-toolbar-row>
+        </mat-toolbar>
+
+        <div [class.router-container]="!homePage">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</mat-drawer-container>
