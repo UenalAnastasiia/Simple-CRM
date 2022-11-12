@@ -50,6 +50,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { HomeComponent } from './homepage/home/home.component';
 import { FooterComponent } from './homepage/footer/footer.component';
 import { LoginComponent } from './login/login.component';
+import { ImprintComponent } from './homepage/imprint/imprint.component';
+import { DataProtectionComponent } from './homepage/data-protection/data-protection.component';
+import { SignUpMessageComponent } from './messages-bar/sign-up-message/sign-up-message.component';
 
 
 
@@ -76,7 +79,10 @@ import { LoginComponent } from './login/login.component';
     DeleteTaskMessageComponent,
     HomeComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    ImprintComponent,
+    DataProtectionComponent,
+    SignUpMessageComponent
   ],
   imports: [
     BrowserModule,

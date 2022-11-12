@@ -6,6 +6,8 @@ import { UserDetailsComponent } from './user-data/user-details/user-details.comp
 import { UserComponent } from './user-data/user/user.component';
 import { TaskDetailsComponent } from './task-data/task-details/task-details.component';
 import { HomeComponent } from './homepage/home/home.component';
+import { ImprintComponent } from './homepage/imprint/imprint.component';
+import { DataProtectionComponent } from './homepage/data-protection/data-protection.component';
 
 const routes: Routes = [ 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -14,7 +16,9 @@ const routes: Routes = [
   { path: 'user', component: UserComponent },
   { path: 'user/:id', component: UserDetailsComponent },
   { path: 'task', component: DialogAddTaskComponent },
-  { path: 'task/:id', component: TaskDetailsComponent }
+  { path: 'task/:id', component: TaskDetailsComponent },
+  { path: 'imprint', component: ImprintComponent },
+  { path: 'data-protection', component: DataProtectionComponent }
 ];
 
 @NgModule({

@@ -23,4 +23,9 @@
         margin-right: 4px;
         margin-left: 4px;
     }
+
+    a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
 }

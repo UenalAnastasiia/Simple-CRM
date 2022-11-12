@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
 
 
   checkURL() {
-    if (window.location.href.includes('home')) {
+    if (window.location.href.includes('home') || window.location.href.includes('imprint') || window.location.href.includes('data-protection')) {
       this.homePage = true;
       console.log('homePage = false')
     }

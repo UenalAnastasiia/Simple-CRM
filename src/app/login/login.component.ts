@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
+import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { SignUpMessageComponent } from '../messages-bar/sign-up-message/sign-up-message.component';
 
 @Component({
   selector: 'app-login',
@@ -21,8 +24,12 @@ export class LoginComponent implements OnInit {
     password: ''
   };
 
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
+  email = new FormControl('', [Validators.required, Validators.email]);
 
-  constructor(public dialogRef: MatDialogRef<LoginComponent>) { }
+
+  constructor(public dialogRef: MatDialogRef<LoginComponent>, private signMessage: MatSnackBar) { }
 
   ngOnInit(): void {
     const localData = localStorage.getItem('signUpUsers');
@@ -40,6 +47,7 @@ export class LoginComponent implements OnInit {
       email: '',
       password: ''
     };
+    this.showSignUpMessage();
   }
 
 
@@ -51,5 +59,15 @@ export class LoginComponent implements OnInit {
     } else {
       alert('Wrong User Name or Password');
     }
+  }
+
+
+  showSignUpMessage() {
+    this.signMessage.openFromComponent(SignUpMessageComponent, {
+      duration: 2000,
+      panelClass: ['white-snackbar'],
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition
+    });
   }
 }
