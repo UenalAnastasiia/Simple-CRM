@@ -15,11 +15,8 @@ export class AppComponent implements OnInit {
   contactLength = 0;
   hidden = false;
   homePage: boolean = false;
-  mySubscription: any;
 
-
-  constructor(private firestore: Firestore, public router: Router) {
-  }
+  constructor(private firestore: Firestore, public router: Router) { }
 
 
   ngOnInit(): void {

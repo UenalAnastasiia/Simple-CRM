@@ -12,12 +12,11 @@ export class DashboardComponent implements OnInit {
   taskLength: number;
   contactLength = 0;
   hidden = false;
-  homePage: boolean = false;
+
 
   constructor(private firestore: Firestore) { }
 
   ngOnInit(): void {
-
     this.checkUserLength();
     this.checkTaskLength();
     if (this.contactLength == 0) {
@@ -44,5 +43,4 @@ export class DashboardComponent implements OnInit {
       this.taskLength = docsSnap.docs.length;
     });
   }
-
 }

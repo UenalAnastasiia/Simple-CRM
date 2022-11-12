@@ -12,9 +12,9 @@ export class HomeComponent implements OnInit {
 
   constructor(public dialog: MatDialog, public router: Router) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
+  
   scrollTo(ID: string): void {
     document.getElementById(ID).scrollIntoView({ behavior: "smooth" });
   }
@@ -22,15 +22,5 @@ export class HomeComponent implements OnInit {
 
   openLoginDialog() {
     this.dialog.open(LoginComponent);
-  }
-
-
-  openApp() {
-    this.router.navigate(['/dashboard']);
-  }
-
-
-  reload() {
-    location.reload();
   }
 }

@@ -5,12 +5,11 @@ import { DashboardComponent } from './dashboard-data/dashboard/dashboard.compone
 import { UserDetailsComponent } from './user-data/user-details/user-details.component';
 import { UserComponent } from './user-data/user/user.component';
 import { TaskDetailsComponent } from './task-data/task-details/task-details.component';
-import { StartscreenComponent } from './homepage/startscreen/startscreen.component';
+import { HomeComponent } from './homepage/home/home.component';
 
 const routes: Routes = [ 
-  // { path: '', component: StartscreenComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: StartscreenComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'user', component: UserComponent },
   { path: 'user/:id', component: UserDetailsComponent },

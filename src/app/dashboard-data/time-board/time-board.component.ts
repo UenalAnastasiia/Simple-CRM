@@ -46,7 +46,6 @@ export class TimeBoardComponent implements OnInit, OnDestroy {
   berlinTimeZone() {
     const berlinDate = this.changeTimeZone(new Date(), 'Europe/Berlin');
     this.berlinTime = berlinDate;
-
   }
 
 
@@ -54,6 +53,7 @@ export class TimeBoardComponent implements OnInit, OnDestroy {
     const nyDate = this.changeTimeZone(new Date(), 'America/New_York');
     this.nyTime = nyDate;
   }
+
 
   londonTimeZone() {
     const londonDate = this.changeTimeZone(new Date(), 'Europe/London');
@@ -88,5 +88,4 @@ export class TimeBoardComponent implements OnInit, OnDestroy {
       this.subscription.unsubscribe();
     }
   }
-
 }

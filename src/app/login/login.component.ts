@@ -1,14 +1,14 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  encapsulation: ViewEncapsulation.None 
+  encapsulation: ViewEncapsulation.None
 })
 export class LoginComponent implements OnInit {
+
   signupUsers: any[] = [];
   signupObj: any = {
     userName: '',
@@ -21,7 +21,8 @@ export class LoginComponent implements OnInit {
     password: ''
   };
 
-  constructor(private router: Router, public dialogRef: MatDialogRef<LoginComponent>) { }
+
+  constructor(public dialogRef: MatDialogRef<LoginComponent>) { }
 
   ngOnInit(): void {
     const localData = localStorage.getItem('signUpUsers');
@@ -46,7 +47,7 @@ export class LoginComponent implements OnInit {
     const isUserExist = this.signupUsers.find(m => m.userName == this.loginObj.userName && m.password == this.loginObj.password);
     if (isUserExist != undefined) {
       this.dialogRef.close();
-      this.router.navigate(['/dashboard']);
+      window.location.replace('/dashboard');
     } else {
       alert('Wrong User Name or Password');
     }

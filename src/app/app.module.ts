@@ -47,7 +47,6 @@ import { DeleteUserMessageComponent } from './messages-bar/delete-user-message/d
 import { DialogDeleteTaskComponent } from './task-data/dialog-delete-task/dialog-delete-task.component';
 import { DeleteTaskMessageComponent } from './messages-bar/delete-task-message/delete-task-message.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { StartscreenComponent } from './homepage/startscreen/startscreen.component';
 import { HomeComponent } from './homepage/home/home.component';
 import { FooterComponent } from './homepage/footer/footer.component';
 import { LoginComponent } from './login/login.component';
@@ -75,7 +74,6 @@ import { LoginComponent } from './login/login.component';
     DeleteUserMessageComponent,
     DialogDeleteTaskComponent,
     DeleteTaskMessageComponent,
-    StartscreenComponent,
     HomeComponent,
     FooterComponent,
     LoginComponent
