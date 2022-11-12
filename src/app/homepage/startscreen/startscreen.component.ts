@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./startscreen.component.scss']
 })
 export class StartscreenComponent implements OnInit {
-
+  homePage: boolean;
   constructor() { }
 
   ngOnInit(): void {
+    this.homePage = true;
   }
 
 }

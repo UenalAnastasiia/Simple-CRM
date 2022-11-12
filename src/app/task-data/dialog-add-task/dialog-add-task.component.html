@@ -97,6 +97,7 @@
         </div>
 
         <div mat-dialog-actions class="d-flex">
+            <button [disabled]="loading" (click)="cleanForm()" mat-button cdkFocusInitial>Reset</button>
             <button [disabled]="loading || !title.valid || !description.valid || !datepicker.valid || !department.valid" (click)="checkAndSave()" mat-button cdkFocusInitial>Save</button>
         </div>
     </mat-card>

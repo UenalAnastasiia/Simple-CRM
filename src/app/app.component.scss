@@ -65,6 +65,35 @@ mat-toolbar-row {
 
 }
 
+
+.logout-box {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 32px;
+    left: 60px;
+
+    &:hover {
+        cursor: pointer;
+        filter: brightness(1.2);
+    }
+
+    span {
+        font-size: 24px;
+        font-weight: 600;
+        margin-right: 8px;
+        color: #be2a2a;
+    }
+
+    mat-icon {
+        color: #be2a2a;
+        font-size: 28px;
+        height: 28px;
+        width: 28px;
+    }
+}
+
 .router-container {
     padding-left: 56px;
     padding-right: 56px;

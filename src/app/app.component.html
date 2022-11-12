@@ -1,6 +1,6 @@
 <mat-drawer-container class="mat-draw-container" autosize>
     <mat-drawer #drawer class="sidenav" [opened]="true" mode="side" [class.d-none]="homePage">
-        <div class="logo-container" routerLink="/home">
+        <div class="logo-container">
             <img class="logo-img" src="assets/img/logo.png">
 
         </div>
@@ -19,6 +19,11 @@
                 <span>Task</span>
             </li>
         </ul>
+
+        <div class="logout-box" routerLink="/home">
+            <span>Logout</span>
+            <mat-icon>logout</mat-icon>
+        </div>
     </mat-drawer>
 
     <div class="example-sidenav-content">

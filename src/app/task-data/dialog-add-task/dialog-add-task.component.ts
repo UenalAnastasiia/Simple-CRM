@@ -82,4 +82,13 @@ export class DialogAddTaskComponent implements OnInit {
       verticalPosition: this.verticalPosition
     });
   }
+
+  cleanForm() {
+    this.task.title = '';
+    this.task.description = '';
+    this.task.type = '';
+    this.task.employee = '';
+    this.task.priority = '';
+    this.task.department = '';
+  }
 }
