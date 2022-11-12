@@ -1,8 +1,9 @@
 .task-container {
     background-image: url('/../assets/img/taskboard.jpg');
-    min-height: calc(50vh - 28px);
+    min-height: calc(50vh - 34px);
     margin-left: -56px;
     width: calc(100% + 112px);
+    border-top: 5px solid aliceblue;
     display: flex;
     align-items: center;
     flex-direction: column;

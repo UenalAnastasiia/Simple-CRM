@@ -49,9 +49,8 @@ import { DeleteTaskMessageComponent } from './messages-bar/delete-task-message/d
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { StartscreenComponent } from './homepage/startscreen/startscreen.component';
 import { HomeComponent } from './homepage/home/home.component';
-import { DescriptionComponent } from './homepage/description/description.component';
 import { FooterComponent } from './homepage/footer/footer.component';
-import { LoginDialogComponent } from './login-dialog/login-dialog.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -78,9 +77,8 @@ import { LoginDialogComponent } from './login-dialog/login-dialog.component';
     DeleteTaskMessageComponent,
     StartscreenComponent,
     HomeComponent,
-    DescriptionComponent,
     FooterComponent,
-    LoginDialogComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,

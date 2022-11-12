@@ -33,7 +33,7 @@ export class TaskBoardComponent implements OnInit {
   getCardColor(priority: string) {
     switch (priority) {
       case 'Low': return '#ffff84';
-      case 'Middle': return 'rgb(25 241 255)';
+      case 'Middle': return 'rgb(65 207 70)';
       case 'High': return '#ee9090';
       default: return '';
     }

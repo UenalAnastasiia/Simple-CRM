@@ -1,10 +1,10 @@
-.plant-bg {
+.time-bg {
     background-image: url('/../assets/img/network.jpg');
-    min-height: calc(50vh - 28px);
+    min-height: calc(50vh - 34px);
     margin-top: -16px;
     margin-left: -56px;
     width: calc(100% + 112px);
-    // margin-top: 56px;
+    border-bottom: 5px solid aliceblue;
     display: flex;
     justify-content: space-around;
     align-items: center;

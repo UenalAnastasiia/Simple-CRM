@@ -1,7 +1,7 @@
 <div class="homePage">
     <div class="start-container">
         <div class="logo-container">
-            <img class="logo-img" src="assets/img/logo.png">
+            <img class="logo-img" src="assets/img/logo-blue.png">
 
             <div class="login-box" (click)="openLoginDialog()">
                 <span>Login</span>
@@ -46,8 +46,11 @@
                 </mat-card>
             </div>
 
-            <div class="btn-box" (click)="openApp()">
-                <button color="success" mat-raised-button >Try it out</button>
+            <div class="arrow-container animated fadeInDown btn-box" (click)="openLoginDialog()">
+                <div class="arrow-2">
+                    Try it
+                </div>
+                <div class="arrow-1 animated hinge infinite zoomIn"></div>
             </div>
         </div>
     </div>

@@ -19,8 +19,7 @@ export class AppComponent implements OnInit {
 
 
   constructor(private firestore: Firestore, public router: Router) {
-   }
-
+  }
 
 
   ngOnInit(): void {

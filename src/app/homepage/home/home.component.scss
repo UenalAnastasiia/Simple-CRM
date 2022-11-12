@@ -55,11 +55,11 @@
         font-size: 24px;
         font-weight: 600;
         margin-right: 8px;
-        color: #097eb4;
+        color: #00BCD4;
     }
 
     mat-icon {
-        color: #097eb4;
+        color: #00BCD4;
         font-size: 28px;
         height: 28px;
         width: 28px;
@@ -90,7 +90,7 @@
 .arrow-box {
     margin-top: 74px;
     font-weight: 600;
-    color: #673AB7;
+    color: #00BCD4;
     letter-spacing: 2px;
     display: flex;
     flex-direction: column;
@@ -113,11 +113,12 @@
 }
 
 .arrows path {
-    stroke: #673AB7;
+    stroke: #00BCD4;
     fill: transparent;
     stroke-width: 1px;
     animation: arrow 2s infinite;
     -webkit-animation: arrow 2s infinite;
+    
 }
 
 @keyframes arrow {
@@ -185,6 +186,7 @@
     width: calc(100vw - 15px);
     position: relative;
     margin-top: 56px;
+    background-color: rgba(3, 169, 244, 0.05);
 }
 
 .info-box {
@@ -248,3 +250,106 @@ mat-card {
     padding-right: 56px;
     padding-top: 16px;
 }
+
+
+/* Arrow UP */
+.arrow-container{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+
+    &:hover {
+        cursor: pointer;
+    }
+  }
+  
+  .arrow-1{
+    width: 100px;
+    height: 100px;
+    background: #00BCD4;
+    opacity: 0.5;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .arrow-2{
+    width: 60px;
+    height: 60px;
+    background: #00BCD4;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+  }
+  
+  .arrow-2:before{
+    width: 52px;
+    height: 52px;
+    content: "";
+    border: 2px solid #006064;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+  
+  .arrow-2 i.fa{
+    font-size: 30px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Custom Animate.css */
+  
+  .animated.hinge {
+    animation: zoomIn 2s infinite;
+  }
+  
+  @-webkit-keyframes zoomIn {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale3d(.4, .4, .4);
+              transform: scale3d(.4, .4, .4);
+    }
+  
+    50% {
+      opacity: 0.5;
+    }
+    
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale3d(.4, .4, .4);
+              transform: scale3d(.4, .4, .4);
+    }
+  
+    50% {
+      opacity: 0.5;
+    }
+    
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .zoomIn {
+    -webkit-animation-name: zoomIn;
+            animation-name: zoomOut;
+  }
