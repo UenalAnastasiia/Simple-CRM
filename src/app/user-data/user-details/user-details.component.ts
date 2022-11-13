@@ -22,6 +22,9 @@ export class UserDetailsComponent implements OnInit {
   userData: any;
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
+  maleImg: boolean = false;
+  femaleImg: boolean = false;
+  profileImg: boolean = false;
 
 
   constructor(private route: ActivatedRoute, private firestore: Firestore, public dialog: MatDialog, private clipboard: Clipboard, private copyBar: MatSnackBar) { }
@@ -42,6 +45,19 @@ export class UserDetailsComponent implements OnInit {
     this.userData = snapDoc.data();
     this.user = new User(this.userData);
     this.user.id = this.userID;
+
+    this.checkProfileImg();
+  }
+
+
+  checkProfileImg() {
+    if (this.user.gender == 'Male') {
+      this.maleImg = true;
+    } else if (this.user.gender == 'Female') {
+      this.femaleImg = true;
+    } else {
+      this.profileImg = true;
+    }
   }
 
 

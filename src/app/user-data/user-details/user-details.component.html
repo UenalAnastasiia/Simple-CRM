@@ -8,7 +8,9 @@
         <button mat-menu-item (click)="editUserName()">Edit</button>
     </mat-menu>
 
-    <img src="assets/img/profile-woman.png" alt="">
+    <img *ngIf="femaleImg" src="assets/img/profile-woman.png">
+    <img *ngIf="maleImg" src="assets/img/profile-man.png">
+    <img *ngIf="profileImg" src="assets/img/profile.png">
     <div class="user-details">
         <div class="d-flex">
             <h2 #nameCopy>{{ user.firstName }} {{ user.lastName }}</h2>

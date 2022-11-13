@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   taskLength: number;
   contactLength = 0;
   hidden = false;
-  homePage: boolean = false;
+  homePage: boolean = true;
 
   constructor(private firestore: Firestore, public router: Router) { }
 
@@ -30,9 +30,8 @@ export class AppComponent implements OnInit {
 
 
   checkURL() {
-    if (window.location.href.includes('home') || window.location.href.includes('imprint') || window.location.href.includes('data-protection')) {
-      this.homePage = true;
-      console.log('homePage = false')
+    if (window.location.href.includes('user') || window.location.href.includes('dashboard') || window.location.href.includes('task')) {
+      this.homePage = false;
     }
   }
 
