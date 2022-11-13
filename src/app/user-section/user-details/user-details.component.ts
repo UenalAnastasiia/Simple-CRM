@@ -9,7 +9,7 @@ import { DialogEditUserComponent } from '../dialog-edit-user/dialog-edit-user.co
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 import { CopyMessageComponent } from '../../messages-bar/copy-message/copy-message.component';
 import { DialogEditPersonalInfoComponent } from '../dialog-edit-personal-info/dialog-edit-personal-info.component';
-import { DialogDeleteUserComponent } from 'src/app/user-data/dialog-delete-user/dialog-delete-user.component';
+import { DialogDeleteUserComponent } from 'src/app/user-section/dialog-delete-user/dialog-delete-user.component';
 
 @Component({
   selector: 'app-user-details',

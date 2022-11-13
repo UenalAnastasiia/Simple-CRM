@@ -3,8 +3,8 @@ import { collection, collectionData, doc, Firestore, getDoc } from '@angular/fir
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { DialogDeleteTaskComponent } from 'src/app/task-data/dialog-delete-task/dialog-delete-task.component';
-import { DialogEditTaskComponent } from 'src/app/task-data/dialog-edit-task/dialog-edit-task.component';
+import { DialogDeleteTaskComponent } from 'src/app/task-section/dialog-delete-task/dialog-delete-task.component';
+import { DialogEditTaskComponent } from 'src/app/task-section/dialog-edit-task/dialog-edit-task.component';
 import { Task } from 'src/models/task.class';
 
 @Component({
