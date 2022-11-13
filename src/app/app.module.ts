@@ -53,8 +53,8 @@ import { LoginComponent } from './login/login.component';
 import { ImprintComponent } from './homepage/imprint/imprint.component';
 import { DataProtectionComponent } from './homepage/data-protection/data-protection.component';
 import { SignUpMessageComponent } from './messages-bar/sign-up-message/sign-up-message.component';
-
-
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -109,6 +109,8 @@ import { SignUpMessageComponent } from './messages-bar/sign-up-message/sign-up-m
     MatRadioModule,
     ReactiveFormsModule,
     Ng2SearchPipeModule,
+    MatTableModule,
+    MatPaginatorModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),

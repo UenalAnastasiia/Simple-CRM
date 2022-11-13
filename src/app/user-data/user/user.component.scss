@@ -15,7 +15,7 @@
     background: #b71c1c;
 }
 
-table {
+mat-table {
     width: 100%;
     border-collapse: collapse;
 
@@ -41,10 +41,11 @@ table {
 
         td {
             height: 48px;
-            width: 20vw;
-            max-width: 20vw;
+            width: 30vw;
+            max-width: 30vw;
             margin-right: 4px;
             overflow-x: hidden;
+            vertical-align: middle;
 
             &:hover {
                 overflow-x: auto;
