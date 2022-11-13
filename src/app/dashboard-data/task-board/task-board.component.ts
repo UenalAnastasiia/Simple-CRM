@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { collectionData, Firestore } from '@angular/fire/firestore';
+import { collectionData, Firestore, getDocs } from '@angular/fire/firestore';
 import { MatDialog } from '@angular/material/dialog';
 import { collection } from '@firebase/firestore';
 import { Observable } from 'rxjs';
@@ -16,6 +16,8 @@ export class TaskBoardComponent implements OnInit {
   allTasks$: Observable<any>;
   allTasks: any = [];
   taskID: string;
+  noTasks: boolean = false;
+  taskLength: number;
 
 
   constructor(public dialog: MatDialog, private firestore: Firestore) { }
@@ -36,6 +38,20 @@ export class TaskBoardComponent implements OnInit {
       case 'Middle': return 'rgb(65 207 70)';
       case 'High': return '#ee9090';
       default: return '';
+    }
+  }
+
+
+  async checkTaskLength() {
+    const userCollection = collection(this.firestore, 'tasks');
+    const docsSnap = await getDocs(userCollection);
+
+    docsSnap.forEach(() => {
+      this.taskLength = docsSnap.docs.length;
+    });
+
+    if (this.taskLength == 0) {
+      this.noTasks = true;
     }
   }
 }

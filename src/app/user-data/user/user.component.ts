@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
-import { Firestore, collectionData } from '@angular/fire/firestore';
+import { Firestore, collectionData, getDocs } from '@angular/fire/firestore';
 import { MatDialog } from '@angular/material/dialog';
 import { collection } from '@firebase/firestore';
 import { Observable } from 'rxjs';
@@ -24,8 +24,8 @@ export class UserComponent implements OnInit {
   allUsers$: Observable<any>;
   allUsers: any = [];
   userID: string;
-  filterTerm!: string;
-  userData = this.allUsers = [];
+  noUsers: boolean = false;
+  userLength: number;
 
   dataSource: MatTableDataSource<User>;
   public displayedColumns: string[] = ['name', 'email', 'country'];
@@ -51,6 +51,20 @@ export class UserComponent implements OnInit {
 
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
+    }
+  }
+
+
+  async checkUserLength() {
+    const userCollection = collection(this.firestore, 'users');
+    const docsSnap = await getDocs(userCollection);
+
+    docsSnap.forEach(() => {
+      this.userLength = docsSnap.docs.length;
+    });
+
+    if (this.userLength == 0) {
+      this.noUsers = true;
     }
   }
 

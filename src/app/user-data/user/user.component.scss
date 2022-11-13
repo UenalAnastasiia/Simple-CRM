@@ -26,6 +26,7 @@ mat-table {
 
         &:first-child {
             cursor: unset;
+            height: 32px;
 
             &:hover {
                 background-color: unset;
@@ -105,8 +106,4 @@ mat-table {
 
 .mat-select {
     text-align: center;
-}
-
-.mat-card {
-    padding: 0 !important;
 }

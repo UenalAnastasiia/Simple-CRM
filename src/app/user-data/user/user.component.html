@@ -1,4 +1,8 @@
-<mat-card class="user-card">
+<mat-card *ngIf="noUsers">
+    <p>No Users in the list...</p>
+</mat-card>
+
+<mat-card *ngIf="!noUsers" class="user-card">
     <mat-form-field appearance="standard" class="search-box">
         <mat-label>Search User</mat-label>
         <input matInput (keyup)="applyFilter($event)" #input>

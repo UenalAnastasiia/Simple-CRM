@@ -7,7 +7,11 @@
         <mat-icon>push_pin</mat-icon>
     </div>
 
-    <div class="task-board">
+    <div class="noTask-box" *ngIf="noTasks">
+        <p>No tasks in the list...</p>
+    </div>
+
+    <div class="task-board" *ngIf="!noTasks">
         <div class="pos-relativ" *ngFor="let task of allTasks" [routerLink]="['/task/' + task.taskID]">
             <mat-icon>push_pin</mat-icon>
             <mat-card class="task-card" [style.background-color]="getCardColor(task.priority)">
