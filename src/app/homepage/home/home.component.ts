@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { LoginComponent } from 'src/app/login/login.component';
+import { LoginComponent } from 'src/app/homepage/login/login.component';
 
 @Component({
   selector: 'app-home',

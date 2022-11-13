@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
-import { SignUpMessageComponent } from '../messages-bar/sign-up-message/sign-up-message.component';
+import { SignUpMessageComponent } from '../../messages-bar/sign-up-message/sign-up-message.component';
 
 @Component({
   selector: 'app-login',
