@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
 
 
   checkURL() {
-    if (window.location.href.includes('user') || window.location.href.includes('dashboard') || window.location.href.includes('task')) {
+    if (window.location.href.includes('user') || window.location.href.includes('dashboard') || window.location.href.includes('task') || window.location.href.includes('help')) {
       this.homePage = false;
     }
   }
