@@ -1,6 +1,5 @@
 .start-container {
     height: 100vh;
-    width: calc(100vw - 15px);
     background-color: rgb(3 169 244 / 5%);
 }
 
@@ -80,5 +79,25 @@
         &:hover {
             text-decoration: underline;
         }
+    }
+}
+
+@media (max-width: 600px) {
+    .login-box {
+        margin-right: -14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo-container {
+        flex-direction: column;
+    }
+    
+    .logo-img {
+        padding-bottom: 0;
+    }
+
+    .header-box {
+        margin-left: 16px;
     }
 }

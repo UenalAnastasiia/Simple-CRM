@@ -70,3 +70,27 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .login-box {
+        margin-right: -14px;
+    }
+
+    .header-box {
+        margin-left: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo-container {
+        flex-direction: column;
+    }
+    
+    .logo-img {
+        padding-bottom: 0;
+    }
+
+    .header-box {
+        margin-left: 4px;
+    }
+}

@@ -94,6 +94,11 @@ mat-toolbar-row {
     }
 }
 
+.close-btn {
+    justify-content: center;
+    visibility: hidden;
+}
+
 .router-container {
     padding-left: 56px;
     padding-right: 56px;
@@ -101,5 +106,7 @@ mat-toolbar-row {
 }
 
 @media (max-width: 1050px) {
-
+    .close-btn {
+        visibility: visible;
+    }
 }

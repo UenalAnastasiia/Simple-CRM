@@ -63,7 +63,6 @@ mat-table {
                 padding-left: 16px;
             }
         }
-    
     }
 
     th {
@@ -73,6 +72,7 @@ mat-table {
         text-align: start;
     }
 }
+
 .search-box {
     width: calc(100% - 48px);
     padding-left: 24px;
@@ -104,10 +104,33 @@ mat-table {
     border-radius: 24px;
 }
 
-.mat-paginator, .mat-paginator-page-size .mat-select-trigger {
+.mat-paginator,
+.mat-paginator-page-size .mat-select-trigger {
     text-align: center;
 }
 
-.mat-paginator-outer-container {
-    height: 38px;
+@media (max-width: 600px) {
+    mat-table {
+        tr {
+            td {
+                max-width: 40vw;
+
+                &:first-child {
+                    padding-left: 4px;
+                }
+            }
+
+            th {
+                &:first-child {
+                    padding-left: 4px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .mat-paginator-range-label {
+        display: none;
+    }
 }

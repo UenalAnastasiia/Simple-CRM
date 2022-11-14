@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
         this.showToggle = 'show';
         this.mode = 'over';
         this.openSidenav = false;
-      } else if (width > 1050) {
+      } else if (width > 1050)  {
         this.showToggle = 'hide';
         this.mode = 'side';
         this.openSidenav = true;

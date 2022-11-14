@@ -50,3 +50,58 @@
         }
     }
 }
+
+
+@media (max-width: 800px) {
+    .time-bg {
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 16px;
+
+        .clock-container {
+            h1 {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .calendar-size {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 420px) {
+    .time-bg {
+        .clock-container {
+            h1 {
+                font-size: 14px;
+            }
+        }
+
+        .calendar-size {
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .time-box {
+        padding: 2px;
+    }
+
+    .calendar-size {
+        width: 220px;
+    }
+
+    .clock-container {
+        .mat-icon {
+            margin-left: 0 !important;
+        }
+
+        h1 {
+            font-size: 12px;
+        }
+    }
+}

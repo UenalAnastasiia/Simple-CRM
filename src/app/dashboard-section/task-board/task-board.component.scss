@@ -78,3 +78,9 @@
     color: white;
     margin-top: 32px;
 }
+
+@media (max-width: 350px) {
+    .task-card {
+        margin: 14px;
+    }
+}
