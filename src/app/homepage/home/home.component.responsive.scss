@@ -1,0 +1,104 @@
+@media (max-width: 1000px) {
+    .img-box {
+        height: 30vh;
+    }
+
+    .info-box {
+        top: 38vh;
+    }
+
+    .card-descriptions {
+        flex-direction: column;
+        align-items: center;
+
+        mat-card {
+            margin-bottom: 4px;
+        }
+    }
+
+    .arrow-container {
+        left: auto;
+        right: 40px;
+        bottom: -50px;
+    }
+}
+
+@media (max-width: 700px) {
+    .header-box {
+        h1 {
+            font-size: 42px;
+        }
+    }  
+
+    .login-box {
+        margin-right: 0px;
+    }
+
+    .arrow-container {
+        right: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .arrow-container {
+        right: 35vw;
+        bottom: auto;
+        top: -16vh;
+    }
+}
+
+@media (max-width: 500px) {
+    .header-box {
+        text-align: center;
+        h1 {
+            font-size: 38px;
+        }
+    }  
+
+    .login-box {
+        margin-right: -14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo-container {
+        flex-direction: column;
+    }
+    
+    .logo-img {
+        padding-bottom: 0;
+    }
+
+    .img-box {
+        height: 20vh;
+    }
+
+    .info-box {
+        top: 32vh;
+    }
+
+    .arrow-container {
+        top: -20vh;
+    }
+
+    mat-card {
+        max-width: 210px;
+        width: 210px;
+
+        span:first-child {
+            font-size: 22px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .header-box {
+        h1 {
+            font-size: 32px;
+        }
+    }  
+
+    .arrow-container {
+        right: 30vw;
+    }
+}
