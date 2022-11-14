@@ -17,7 +17,9 @@
 }
 
 .links-box {
-    a, span {
+
+    a,
+    span {
         color: #097eb4;
         font-size: 18px;
         margin-right: 4px;
@@ -27,5 +29,36 @@
     a:hover {
         cursor: pointer;
         text-decoration: underline;
+    }
+}
+
+@media (max-width: 1000px) {
+    .logo-container {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 500px) {
+    .links-box {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            font-size: 14px;
+        }
+
+        span {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        bottom: 16px;
+
+        img {
+            width: 130px;
+        }
     }
 }
