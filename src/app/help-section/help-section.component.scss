@@ -76,3 +76,21 @@ tr.example-element-row:not(.example-expanded-row):active {
     width: 32px;
     background: rgb(65 207 70);
 }
+
+.mat-cell {
+    text-align: center;
+}
+
+.help-card {
+    margin: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min-content;
+    padding: 28px;
+    margin-top: 50px;
+}
+.priority-help {
+    display: flex;
+}
