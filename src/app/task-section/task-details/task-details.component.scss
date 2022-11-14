@@ -90,3 +90,115 @@ mat-card {
 .dep-width {
     width: 214px;
 }
+
+
+@media (max-width: 900px) {
+    mat-card {
+        width: 80vw;
+    }
+
+    .left-form {
+        width: 35vw;
+        margin-right: -6px;
+    }
+    
+    .right-form {
+        width: 50vw;
+        margin-left: 12px;
+    }
+
+    .date-container {
+        mat-form-field {
+            &:first-child {
+                width: 24vw;
+                margin-right: 8px;
+            }
+        
+            &:last-child {
+                width: 24vw;
+            }
+        }
+    }
+
+    .form-margin {
+        margin-right: 6px;
+    }
+}
+
+@media (max-width: 650px) {
+    .dialog-container {
+        height: auto;
+        width: 100vw;
+        margin-left: -71px;
+    }
+
+    mat-card {
+        margin-top: 12px;
+        margin-bottom: 47px;
+    }
+
+    .form-flex {
+        flex-direction: column;
+    }
+
+    .left-form, .right-form {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .date-container {
+        flex-direction: column;
+        width: 100%;
+
+        mat-form-field {
+            &:first-child {
+                width: 100%;
+            }
+        
+            &:last-child {
+                width: 100%;
+            }
+        }
+    }
+
+    .form-box textarea {
+        height: 80px;
+    }
+
+    ::ng-deep .mat-datepicker-content .mat-calendar {
+        width: 200px !important;
+        height: 280px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .dialog-container {
+        margin-left: -35px;
+    }
+}
+
+@media (max-width: 500px) {
+    mat-card {
+        margin-left: 14px;
+    }
+}
+
+@media (max-width: 350px) {
+    .form-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .example-radio-button {
+        margin-bottom: 8px;
+        margin-left: 12px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    mat-card h1 {
+        font-size: 18px;
+    }
+}

@@ -77,3 +77,33 @@
 .margin-10 {
     margin-top: -10px;
 }
+
+.btn-margin {
+    margin-right: 16px;
+}
+
+@media (max-width: 500px) {
+    .user-details-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-details {
+        margin-left: -5px;
+    }
+
+    .delete-btn-box {
+        padding: 2px;
+        margin-top: 4px;
+
+        button {
+            height: 38px;
+            width: 38px;
+        }
+
+    }
+
+    ::ng-deep .mat-fab .mat-button-wrapper{
+        padding: 0;
+    }
+}

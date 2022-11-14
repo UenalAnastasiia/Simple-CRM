@@ -17,3 +17,36 @@ mat-form-field {
         margin-right: 24px;
     }
 }
+
+@media (max-width: 600px) {
+    .form-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .example-radio-button {
+        margin-bottom: 8px;
+        margin-left: 12px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    ::ng-deep .mat-datepicker-content .mat-calendar {
+        width: 200px !important;
+        height: 280px !important;
+    }
+
+    mat-form-field {
+        width: 220px;
+    }
+}
+
+@media (max-width: 350px) {
+    mat-form-field {
+        width: 180px;
+    }
+}

@@ -49,7 +49,7 @@ export class TaskDetailsComponent implements OnInit {
 
 
   openDeleteValidation() {
-    const dialog = this.dialog.open(DialogDeleteTaskComponent);
+    const dialog = this.dialog.open(DialogDeleteTaskComponent, { panelClass: 'mat-dialog-overflow' });
     dialog.componentInstance.task = new Task(this.task.toJSON());
   }
 

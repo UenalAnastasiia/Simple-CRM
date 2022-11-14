@@ -22,3 +22,13 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .field-width {
+        width: 100%;
+    }
+
+    ::ng-deep .mat-select-panel-wrap {
+        max-width: 170px;
+    }
+}

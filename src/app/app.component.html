@@ -6,21 +6,29 @@
         </div>
 
         <ul class="menu-items">
-            <li routerLink="/dashboard">
-                <mat-icon>dashboard</mat-icon>
-                <span>Dashboard</span>
+            <li>
+                <a href="/dashboard">
+                    <mat-icon>dashboard</mat-icon>
+                    <span>Dashboard</span>
+                </a>
             </li>
-            <li routerLink="/user">
-                <mat-icon matBadge="{{ userLength }}" matBadgeColor="primary">person</mat-icon>
-                <span>User</span>
+            <li>
+                <a href="/user">
+                    <mat-icon matBadge="{{ userLength }}" matBadgeColor="primary">person</mat-icon>
+                    <span>User</span>
+                </a>
             </li>
-            <li routerLink="/task">
-                <mat-icon matBadge="{{ taskLength }}" matBadgeColor="primary">edit_document</mat-icon>
-                <span>Task</span>
+            <li>
+                <a href="/task">
+                    <mat-icon matBadge="{{ taskLength }}" matBadgeColor="primary">edit_document</mat-icon>
+                    <span>Task</span>
+                </a>
             </li>
-            <li routerLink="/help">
-                <mat-icon>help</mat-icon>
-                <span>Help</span>
+            <li>
+                <a href="/help">
+                    <mat-icon>help</mat-icon>
+                    <span>Help</span>
+                </a>
             </li>
 
             <li class="close-btn">

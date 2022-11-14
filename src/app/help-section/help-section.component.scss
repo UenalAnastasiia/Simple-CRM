@@ -91,6 +91,29 @@ tr.example-element-row:not(.example-expanded-row):active {
     padding: 28px;
     margin-top: 50px;
 }
+
 .priority-help {
     display: flex;
+}
+
+@media (max-width: 600px) {
+    .help-card {
+        margin: 0px;
+    }
+
+    .priority-help {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 520px) {
+    video{
+        height: 120px;
+    }
+}
+
+@media (max-width: 360px) {
+    video{
+        height: 80px;
+    }
 }

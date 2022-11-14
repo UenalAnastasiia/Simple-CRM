@@ -3,12 +3,12 @@
     <h1 mat-dialog-title>Edit User</h1>
     <div mat-dialog-content>
         <div>
-            <mat-form-field class="margin-right-16" appearance="outline">
+            <mat-form-field class="margin-right-16 name-field" appearance="outline">
                 <mat-label>First Name</mat-label>
                 <input [(ngModel)]="user.firstName" matInput [formControl]="firstName" autocomplete="off">
             </mat-form-field>
 
-            <mat-form-field appearance="outline">
+            <mat-form-field appearance="outline" class="name-field">
                 <mat-label>Last Name</mat-label>
                 <input [(ngModel)]="user.lastName" matInput [formControl]="lastName" autocomplete="off">
             </mat-form-field>
