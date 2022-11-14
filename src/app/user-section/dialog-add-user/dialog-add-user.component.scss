@@ -70,3 +70,38 @@
     justify-content: space-around;
     align-items: center;
 }
+
+@media (max-width: 600px) {
+    .form-box {
+        flex-direction: column;
+
+        .name-form-field, .address-form-field {
+            width: 100%;
+        }
+    }
+
+    .form-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .example-radio-button {
+        margin-bottom: 8px;
+        margin-left: 12px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    ::ng-deep .mat-datepicker-content .mat-calendar {
+        width: 200px !important;
+        height: 280px !important;
+    }
+
+    ::ng-deep .mat-select-panel {
+        max-width: 170px;
+    }
+}

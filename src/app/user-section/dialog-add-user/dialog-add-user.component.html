@@ -20,7 +20,7 @@
                 <mat-label>Gender</mat-label>
                 <input [(ngModel)]="user.gender" matInput class="hidden">
                 <mat-radio-group class="example-radio-group" [(ngModel)]="user.gender" (change)="onChange($event)"
-                    appearance="outline" class="full-width" autocomplete="off">
+                    appearance="outline" class="full-width form-column" autocomplete="off">
                     <mat-radio-button color="primary" class="example-radio-button" value="Male"> Male
                     </mat-radio-button>
                     <mat-radio-button color="primary" class="example-radio-button" value="Female"> Female
@@ -72,7 +72,7 @@
 
             <mat-form-field appearance="outline" class="address-form-field">
                 <mat-label>Country</mat-label>
-                <mat-select [(ngModel)]="user.country" [formControl]="country" required>
+                <mat-select [(ngModel)]="user.country" [formControl]="country" required class="select-width">
                     <mat-option *ngFor="let country of countries" [value]="country.name">{{ country.name }}</mat-option>
                 </mat-select>
             </mat-form-field>

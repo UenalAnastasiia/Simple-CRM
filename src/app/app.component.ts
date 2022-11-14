@@ -33,14 +33,14 @@ export class AppComponent implements OnInit {
     this.checkURL();
     this.checkUserLength();
     this.checkTaskLength();
-    this.checkWidth();
+    this.checkScreenWidth();
     if (this.contactLength == 0) {
       this.hidden = !this.hidden;
     }
   }
 
 
-  checkWidth() {
+  checkScreenWidth() {
     this.getScreenWidth().subscribe(width => {
       if (width < 1050) {
         this.showToggle = 'show';
