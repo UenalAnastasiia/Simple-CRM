@@ -1,5 +1,5 @@
-<mat-drawer-container class="mat-draw-container" autosize>
-    <mat-drawer #drawer class="sidenav" [opened]="true" mode="side" [class.d-none]="homePage">
+<mat-sidenav-container class="mat-draw-container" autosize>
+    <mat-sidenav #sidenav class="sidenav" [opened]="openSidenav" [mode]="mode" [class.d-none]="homePage">
         <div class="logo-container">
             <img class="logo-img" src="assets/img/logo.png">
 
@@ -30,12 +30,12 @@
                 <mat-icon>logout</mat-icon>
             </div>
         </a>
-    </mat-drawer>
+    </mat-sidenav>
 
     <div class="example-sidenav-content">
         <mat-toolbar color="primary" [class.d-none]="homePage">
             <mat-toolbar-row>
-                <mat-icon class="menu-icon" (click)="drawer.toggle()">menu</mat-icon>
+                <mat-icon class="menu-icon" (click)="sidenav.toggle()">menu</mat-icon>
                 <span>Simple CRM</span>
             </mat-toolbar-row>
         </mat-toolbar>
@@ -44,4 +44,4 @@
             <router-outlet></router-outlet>
         </div>
     </div>
-</mat-drawer-container>
+</mat-sidenav-container>
