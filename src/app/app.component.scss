@@ -62,7 +62,6 @@ mat-toolbar-row {
             background-color: rgba($color: #000000, $alpha: 0.05);
         }
     }
-
 }
 
 
@@ -70,27 +69,28 @@ mat-toolbar-row {
     padding: 12px;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: absolute;
-    bottom: 32px;
-    left: 50px;
+    top: -2px;
+    right: 30px;
 
     &:hover {
         cursor: pointer;
-        filter: brightness(1.2);
+        opacity: 0.7;
     }
 
     span {
         font-size: 24px;
-        font-weight: 600;
         margin-right: 8px;
-        color: #be2a2a;
+        color: white;
     }
 
     mat-icon {
-        color: #be2a2a;
+        color: white;
         font-size: 28px;
         height: 28px;
         width: 28px;
+        margin-right: 8px;
     }
 }
 
@@ -108,5 +108,14 @@ mat-toolbar-row {
 @media (max-width: 1050px) {
     .close-btn {
         visibility: visible;
+    }
+}
+
+@media (max-width: 400px) {
+    .logout-box {
+        right: 0;
+        span {
+            display: none;
+        }
     }
 }

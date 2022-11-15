@@ -54,6 +54,7 @@ export class LoginComponent implements OnInit {
   onLogin() {
     const isUserExist = this.signupUsers.find(m => m.userName == this.loginObj.userName && m.password == this.loginObj.password);
     if (isUserExist != undefined) {
+      localStorage.setItem('loggedUser', JSON.stringify(this.loginObj.userName));
       this.dialogRef.close();
       window.location.replace('/dashboard');
     } else {

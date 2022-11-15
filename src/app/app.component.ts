@@ -1,9 +1,11 @@
 import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 import { Firestore, getDocs } from '@angular/fire/firestore';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 import { collection } from '@firebase/firestore';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { LoginComponent } from './homepage/login/login.component';
 
 
 @Component({
@@ -19,6 +21,8 @@ export class AppComponent implements OnInit {
   hidden = false;
   homePage: boolean = true;
 
+  loggedUser: any;
+
   showToggle: string;
   mode: any;
   openSidenav: boolean;
@@ -26,7 +30,7 @@ export class AppComponent implements OnInit {
     (window.innerWidth);
 
 
-  constructor(private firestore: Firestore, public router: Router) { }
+  constructor(private firestore: Firestore, public router: Router, public dialog: MatDialog) { }
 
 
   ngOnInit(): void {
@@ -37,6 +41,16 @@ export class AppComponent implements OnInit {
     if (this.contactLength == 0) {
       this.hidden = !this.hidden;
     }
+    
+    this.loadLoggedUserName();
+  }
+
+
+  loadLoggedUserName() {
+    const localData = localStorage.getItem('loggedUser');
+    if (localData != null) {
+      this.loggedUser = JSON.parse(localData);
+    }
   }
 
 
@@ -46,7 +60,7 @@ export class AppComponent implements OnInit {
         this.showToggle = 'show';
         this.mode = 'over';
         this.openSidenav = false;
-      } else if (width > 1050)  {
+      } else if (width > 1050) {
         this.showToggle = 'hide';
         this.mode = 'side';
         this.openSidenav = true;
@@ -90,5 +104,10 @@ export class AppComponent implements OnInit {
     docsSnap.forEach(() => {
       this.taskLength = docsSnap.docs.length;
     });
+  }
+
+
+  openLoginDialog() {
+    this.dialog.open(LoginComponent);
   }
 }
