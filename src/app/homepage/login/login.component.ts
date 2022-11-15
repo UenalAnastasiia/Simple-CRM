@@ -71,4 +71,10 @@ export class LoginComponent implements OnInit {
       verticalPosition: this.verticalPosition
     });
   }
+
+
+  loadDashboard() {
+    localStorage.setItem('loggedUser', JSON.stringify('Guest'));
+    window.location.replace('/dashboard');
+  }
 }
