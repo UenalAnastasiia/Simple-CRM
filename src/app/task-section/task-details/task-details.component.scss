@@ -128,8 +128,7 @@ mat-card {
 @media (max-width: 650px) {
     .dialog-container {
         height: auto;
-        width: 100vw;
-        margin-left: -71px;
+        width: calc(100vw - 17px)
     }
 
     mat-card {
@@ -168,18 +167,6 @@ mat-card {
     ::ng-deep .mat-datepicker-content .mat-calendar {
         width: 200px !important;
         height: 280px !important;
-    }
-}
-
-@media (max-width: 600px) {
-    .dialog-container {
-        margin-left: -35px;
-    }
-}
-
-@media (max-width: 500px) {
-    mat-card {
-        margin-left: 14px;
     }
 }
 

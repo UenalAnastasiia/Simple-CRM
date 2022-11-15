@@ -72,6 +72,10 @@
 }
 
 @media (max-width: 600px) {
+    .dialog-container {
+        overflow-x: hidden;
+    }
+
     .form-box {
         flex-direction: column;
 

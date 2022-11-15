@@ -6,30 +6,30 @@
         </div>
 
         <ul class="menu-items">
+            <a href="/dashboard">
             <li>
-                <a href="/dashboard">
-                    <mat-icon>dashboard</mat-icon>
-                    <span>Dashboard</span>
-                </a>
+                <mat-icon>dashboard</mat-icon>
+                <span>Dashboard</span>
             </li>
-            <li>
-                <a href="/user">
+            </a>
+            <a href="/user">
+                <li>
                     <mat-icon matBadge="{{ userLength }}" matBadgeColor="primary">person</mat-icon>
                     <span>User</span>
-                </a>
-            </li>
-            <li>
-                <a href="/task">
+                </li>
+            </a>
+            <a href="/task">
+                <li>
                     <mat-icon matBadge="{{ taskLength }}" matBadgeColor="primary">edit_document</mat-icon>
                     <span>Task</span>
-                </a>
-            </li>
-            <li>
-                <a href="/help">
+                </li>
+            </a>
+            <a href="/help">
+                <li>
                     <mat-icon>help</mat-icon>
                     <span>Help</span>
-                </a>
-            </li>
+                </li>
+            </a>
 
             <li class="close-btn">
                 <button mat-raised-button color="primary" (click)="sidenav.toggle()">Close</button>

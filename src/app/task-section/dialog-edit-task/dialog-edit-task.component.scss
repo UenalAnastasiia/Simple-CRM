@@ -42,7 +42,7 @@ mat-card {
         &:first-child {
             width: 14vw;
         }
-    
+
         &:last-child {
             width: 14vw;
         }
@@ -97,7 +97,7 @@ mat-card {
         width: 69vw;
         margin-right: 0px;
     }
-    
+
     .right-form {
         width: 69vw;
         margin-left: 0px;
@@ -108,7 +108,7 @@ mat-card {
             &:first-child {
                 width: 34vw;
             }
-        
+
             &:last-child {
                 width: 34vw;
             }
@@ -121,7 +121,7 @@ mat-card {
 }
 
 @media (max-width: 620px) {
-    .mat-dialog-overflow {
+    .dialog-container {
         overflow-x: hidden;
     }
 
@@ -133,7 +133,7 @@ mat-card {
             &:first-child {
                 width: 100%;
             }
-        
+
             &:last-child {
                 width: 100%;
             }
@@ -144,7 +144,7 @@ mat-card {
         width: 66vw;
         margin-right: 0px;
     }
-    
+
     .right-form {
         width: 65vw;
         margin-left: 0px;
@@ -164,7 +164,7 @@ mat-card {
     .left-form {
         width: 60vw;
     }
-    
+
     .right-form {
         width: 60vw;
     }
@@ -188,7 +188,7 @@ mat-card {
     .left-form {
         width: 55vw;
     }
-    
+
     .right-form {
         width: 55vw;
     }

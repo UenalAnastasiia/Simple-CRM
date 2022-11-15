@@ -1,5 +1,5 @@
 .start-container {
-    height: 100vh;
+    height: calc(100vh - 2px);
     background-color: rgb(3 169 244 / 5%);
 }
 
@@ -83,6 +83,10 @@
 }
 
 @media (max-width: 600px) {
+    .start-container {
+        height: calc(100vh - 12px);
+    }
+
     .login-box {
         margin-right: -14px;
     }
@@ -92,12 +96,18 @@
     .logo-container {
         flex-direction: column;
     }
-    
+
     .logo-img {
         padding-bottom: 0;
     }
 
     .header-box {
+        margin-top: 0;
         margin-left: 16px;
+        font-size: 14px;
+
+        h1 {
+            font-size: 28px;
+        }
     }
 }

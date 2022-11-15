@@ -99,6 +99,7 @@ tr.example-element-row:not(.example-expanded-row):active {
 @media (max-width: 600px) {
     .help-card {
         margin: 0px;
+        padding: 8px;
     }
 
     .priority-help {
@@ -109,6 +110,10 @@ tr.example-element-row:not(.example-expanded-row):active {
 @media (max-width: 520px) {
     video{
         height: 120px;
+    }
+
+    .help-card {
+        margin-left: -24px;
     }
 }
 
